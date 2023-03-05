@@ -78,3 +78,4 @@ while True:
         for elem in root.iter():
             if search_field.lower() == 'tag' and elem.tag == search_term:
                 print(ET.tostring(elem, encoding))
+                
