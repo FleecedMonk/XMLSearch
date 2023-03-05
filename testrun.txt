@@ -1,0 +1,840 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
+  schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang="grc">Ἰλιάς</title>
+                <author>Homer</author>
+                <editor>David B. Monro</editor>
+                <editor>Thomas W. Allen</editor>
+                <sponsor>Perseus Project, Tufts University</sponsor>
+                <principal>Gregory Crane</principal>
+                <respStmt>
+                    <resp>Prepared under the supervision of</resp>
+                    <name>Lisa Cerrato</name>
+                    <name>William Merrill</name>
+                    <name>Elli Mylonas</name>
+                    <name>David Smith</name>
+                </respStmt>
+                <funder n="org:AnnCPB">The Annenberg CPB/Project</funder>
+            </titleStmt>
+            <extent>about 500Kb</extent>
+            <publicationStmt>
+                <publisher>Trustees of Tufts University</publisher>
+                <pubPlace>Medford, MA</pubPlace>
+                <authority>Perseus Project</authority>
+            </publicationStmt>
+            <notesStmt>
+                <note anchored="true" place="unspecified">Basic SGML tagging by Lauren Burka and
+                    Chiara Thayer.</note>
+            </notesStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Homer</author>
+                        <title xml:lang="lat">Homeri Opera</title>
+                        <editor>David B. Monro</editor>
+                        <editor>Thomas W. Allen</editor>
+                        <edition xml:lang="lat">Editio Tertia</edition>
+                        <imprint>
+                            <pubPlace>Oxford</pubPlace>
+                            <publisher>Clarendon Press</publisher>
+                            <date>1908-1920</date>
+                        </imprint>
+                        <biblScope unit="volume">1-2</biblScope>
+                    </monogr>
+                    <series>
+                        <title>Scriptorum classicorum bibliotheca Oxoniensis</title>
+                    </series>
+                    <ref target="https://archive.org/details/homerioperarecog01homeuoft">Internet
+                        Archive</ref>
+                    <ref target="https://archive.org/details/homerioperarecog02homeuoft">Internet
+                        Archive</ref>
+                </biblStruct>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <refsDecl n="CTS">
+                <cRefPattern n="line" matchPattern="(\w+).(\w+)"
+                    replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']//tei:l[@n='$2'])">
+                    <p>This pointer pattern extracts Book and Line</p>
+                </cRefPattern>
+                <cRefPattern n="book" matchPattern="(\w+)"
+                    replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+                    <p>This pointer pattern extracts Book</p>
+                </cRefPattern>
+            </refsDecl>
+            <refsDecl>
+                <refState delim="." unit="book"/>
+                <refState unit="line"/>
+            </refsDecl>
+            <editorialDecl>
+                <quotation marks="none"/>
+            </editorialDecl>
+            
+        </encodingDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="grc">Greek</language>
+                <language ident="eng">English</language>
+            </langUsage>
+        </profileDesc>
+        <revisionDesc>
+            <change who="Lisa Cerrato" when="2016-09-20">added missing info in header; reviewed quotes</change>
+            <change who="Gregory Crane" when="2016-09-19">reviewed and fixed quote tags</change>
+            <change who="Bridget Almas" when="2014-07-18T00:00:00Z">Derived EpiDoc version from
+                urn:cts:greekLit:tlg0012.tlg001.perseus-grc1</change>
+            <change who="Nancy Sultan" when="1990-10-01">Put in card breaks.</change>
+            <change who="EM" when="1991-08-01">Revise DTDs and recheck texts.</change>
+<change who="GRC" when="2018-06-25">11.1: replaced ἠὼς with Ἠὼς</change>
+        </revisionDesc>
+    </teiHeader>
+    <text xml:lang="grc">
+        <body>
+            <div type="edition" n="urn:cts:greekLit:tlg0012.tlg001.perseus-grc2" xml:lang="grc">
+                <div type="textpart" subtype="Book" n="1">
+                    <milestone ed="p" n="1" unit="card"/>
+                    <l n="1">
+                        <milestone ed="P" unit="para"/>μῆνιν ἄειδε <addName type="descriptor" key="muse">θεὰ</addName> <addName type="epithet-lineage" key="achilles">Πηληϊάδεω</addName> <persName key="achilles">Ἀχιλῆος</persName></l>
+                    <l n="2">οὐλομένην, ἣ μυρίʼ <addName type="group name" key="achaean">Ἀχαιοῖς</addName> ἄλγεʼ ἔθηκε,</l>
+                    <l n="3">πολλὰς δʼ ἰφθίμους ψυχὰς <persName key="hades">Ἄϊδι</persName> προΐαψεν</l>
+                    <l n="4">ἡρώων, αὐτοὺς δὲ ἑλώρια τεῦχε κύνεσσιν</l>
+                    <l n="5">οἰωνοῖσί τε πᾶσι, <persName key="zeus">Διὸς</persName> δʼ ἐτελείετο βουλή,</l>
+                    <l n="6">ἐξ οὗ δὴ τὰ πρῶτα διαστήτην ἐρίσαντε</l>
+                    <l n="7"><addName type="epithet-lineage" key="agamemnon">Ἀτρεΐδης</addName> τε <addName type="epithet" key="agamemnon">ἄναξ ἀνδρῶν</addName> καὶ <addName type="descriptor" key="achilles">δῖος</addName> <persName key="achilles">Ἀχιλλεύς</persName>.</l>
+                    <l n="8">
+                        <milestone ed="P" unit="Para"/>τίς τʼ ἄρ σφωε θεῶν ἔριδι ξυνέηκε μάχεσθαι;</l>
+                    <l n="9"><addName type="epithet-lineage" key="apollo"><persName key="leto">Λητοῦς</persName> καὶ <persName key="zeus">Διὸς</persName> υἱός</addName>· ὃ γὰρ βασιλῆϊ χολωθεὶς</l>
+                    <l n="10">νοῦσον ἀνὰ στρατὸν ὄρσε κακήν, ὀλέκοντο δὲ λαοί,</l>
+                    <l n="11">οὕνεκα τὸν <persName key="chryses">Χρύσην</persName> ἠτίμασεν ἀρητῆρα</l>
+                    <l n="12"><addName type="epithet-lineage" key="agamemnon">Ἀτρεΐδης</addName>· ὃ γὰρ ἦλθε θοὰς ἐπὶ νῆας <addName type="group name" key="achaean">Ἀχαιῶν</addName></l>
+                    <l n="13">λυσόμενός τε θύγατρα φέρων τʼ ἀπερείσιʼ ἄποινα,</l>
+                    <l n="14">στέμματʼ ἔχων ἐν χερσὶν <addName type="epithet" key="apollo">ἑκηβόλου</addName> <persName key="apollo">Ἀπόλλωνος</persName></l>
+                    <l n="15">χρυσέῳ ἀνὰ σκήπτρῳ, καὶ λίσσετο πάντας <addName type="group name" key="achaean">Ἀχαιούς</addName>,</l>
+                    <l n="16"><addName type="epithet-lineage" key="agamemnon,menelaus">Ἀτρεΐδα</addName> δὲ μάλιστα δύω, κοσμήτορε λαῶν·</l>
+                 <q>  <l n="17"><addName type="epithet-lineage" key="agamemnon,menelaus">Ἀτρεΐδαι</addName> τε καὶ ἄλλοι <addName type="epithet" key="achaean">ἐϋκνήμιδες</addName> <addName type="group name" key="achaean">Ἀχαιοί</addName>,</l>
+                    <l n="18">ὑμῖν μὲν <addName type="descriptor" key="gods">θεοὶ δοῖεν <placeName key="olympus">Ὀλύμπια</placeName></addName> δώματʼ ἔχοντες</l>
+                    <l n="19">ἐκπέρσαι <addName type="descriptor" key="troy"><persName key="priam">Πριάμοιο</persName> πόλιν</addName>, εὖ δʼ οἴκαδʼ ἱκέσθαι·</l>
+                    <l n="20">παῖδα δʼ ἐμοὶ λύσαιτε φίλην, τὰ δʼ ἄποινα δέχεσθαι,</l>
+                    <l n="21">ἁζόμενοι <addName type="epithet-lineage" key="apollo"><persName key="zeus">Διὸς</persName> υἱὸν</addName> <addName type="epithet" key="apollo">ἑκηβόλον</addName> <persName key="apollo">Ἀπόλλωνα</persName>.</l>
+                 </q>
+                    <l n="22">
+                        <milestone ed="P" unit="para"/>ἔνθʼ ἄλλοι μὲν πάντες ἐπευφήμησαν <addName type="group name" key="achaean">Ἀχαιοὶ</addName></l>
+                    <l n="23">αἰδεῖσθαί θʼ ἱερῆα καὶ ἀγλαὰ δέχθαι ἄποινα·</l>
+                    <l n="24">ἀλλʼ οὐκ <addName type="epithet-lineage" key="agamemnon">Ἀτρεΐδῃ</addName> <persName key="agamemnon">Ἀγαμέμνονι</persName> ἥνδανε θυμῷ,</l>
+                    <l n="25">ἀλλὰ κακῶς ἀφίει, κρατερὸν δʼ ἐπὶ μῦθον ἔτελλε·</l>
+                    <q>
+                        <l n="26">μή σε <addName type="descriptor" key="chryses">γέρον</addName> κοίλῃσιν ἐγὼ παρὰ νηυσὶ κιχείω</l>
+                        <l n="27">ἢ νῦν δηθύνοντʼ ἢ ὕστερον αὖτις ἰόντα,</l>
+                        <l n="28">μή νύ τοι οὐ χραίσμῃ σκῆπτρον καὶ στέμμα θεοῖο·</l>
+                        <l n="29">τὴν δʼ ἐγὼ οὐ λύσω· πρίν μιν καὶ <addName type="descriptor" key="chryses">γῆρας</addName> ἔπεισιν</l>
+                        <l n="30">ἡμετέρῳ ἐνὶ οἴκῳ ἐν <placeName key="argos">Ἄργεϊ</placeName> τηλόθι πάτρης</l>
+                        <l n="31">ἱστὸν ἐποιχομένην καὶ ἐμὸν λέχος ἀντιόωσαν·</l>
+                        <l n="32">ἀλλʼ ἴθι μή μʼ ἐρέθιζε σαώτερος ὥς κε νέηαι.</l>
+                    </q>
+                    <milestone ed="p" n="33" unit="card"/>
+                    <l n="33">
+                        <milestone ed="P" unit="para"/>ὣς ἔφατʼ, ἔδεισεν δʼ ὃ <addName type="descriptor" key="chryses">γέρων</addName> καὶ ἐπείθετο μύθῳ·</l>
+                    <l n="34">βῆ δʼ ἀκέων παρὰ θῖνα <addName type="epithet" key="sea">πολυφλοίσβοιο</addName> θαλάσσης·</l>
+                    <l n="35">πολλὰ δʼ ἔπειτʼ ἀπάνευθε κιὼν ἠρᾶθʼ ὃ <addName type="descriptor" key="chryses">γεραιὸς</addName></l>
+                    <l n="36"><persName key="apollo">Ἀπόλλωνι</persName> <addName type="nobility" key="apollo">ἄνακτι</addName>, τὸν <addName type="epithet" key="leto">ἠΰκομος</addName> τέκε <persName key="leto">Λητώ</persName>·</l>
+                    <q>
+                        <l n="37">κλῦθί μευ <addName type="epithet" key="apollo">ἀργυρότοξʼ</addName>, ὃς <placeName key="chryse">Χρύσην</placeName> ἀμφιβέβηκας</l>
+                        <l n="38"><placeName key="cilla">Κίλλάν</placeName> τε ζαθέην <placeName type="tenedos">Τενέδοιό</placeName> τε ἶφι ἀνάσσεις,</l>
+                        <l n="39"><addName type="epithet" key="apollo">Σμινθεῦ</addName> εἴ ποτέ τοι χαρίεντʼ ἐπὶ νηὸν ἔρεψα,</l>
+                        <l n="40">ἢ εἰ δή ποτέ τοι κατὰ πίονα μηρίʼ ἔκηα</l>
+                        <l n="41">ταύρων ἠδʼ αἰγῶν, τὸ δέ μοι κρήηνον ἐέλδωρ·</l>
+                        <l n="42">τίσειαν <addName type="group name" key="danaans">Δαναοὶ</addName> ἐμὰ δάκρυα σοῖσι βέλεσσιν.</l>
+                    </q>
+                    <l n="43">
+                        <milestone ed="P" unit="para"/>ὣς ἔφατʼ εὐχόμενος, τοῦ δʼ ἔκλυε <addName type="epithet" key="apollo">Φοῖβος</addName> <persName key="apollo">Ἀπόλλων</persName>,</l>
+                    <l n="44">βῆ δὲ κατʼ <placeName key="Olympus">Οὐλύμποιο</placeName> καρήνων χωόμενος κῆρ,</l>
+                    <l n="45">τόξʼ ὤμοισιν ἔχων ἀμφηρεφέα τε φαρέτρην·</l>
+                    <l n="46">ἔκλαγξαν δʼ ἄρʼ ὀϊστοὶ ἐπʼ ὤμων χωομένοιο,</l>
+                    <l n="47">αὐτοῦ κινηθέντος· ὃ δʼ ἤϊε <addName type="epithet" key="nyx">νυκτὶ</addName> ἐοικώς.</l>
+                    <l n="48">ἕζετʼ ἔπειτʼ ἀπάνευθε νεῶν, μετὰ δʼ ἰὸν ἕηκε·</l>
+                    <l n="49">δεινὴ δὲ κλαγγὴ γένετʼ ἀργυρέοιο βιοῖο·</l>
+                    <l n="50">οὐρῆας μὲν πρῶτον ἐπῴχετο καὶ κύνας ἀργούς,</l>
+                    <l n="51">αὐτὰρ ἔπειτʼ αὐτοῖσι βέλος ἐχεπευκὲς ἐφιεὶς</l>
+                    <l n="52">βάλλʼ· αἰεὶ δὲ πυραὶ νεκύων καίοντο θαμειαί.</l>
+                    <l n="53">
+                        <milestone ed="P" unit="para"/>ἐννῆμαρ μὲν ἀνὰ στρατὸν ᾤχετο κῆλα <addName type="descriptor" key="apollo">θεοῖο</addName>,</l>
+                    <l n="54">τῇ δεκάτῃ δʼ ἀγορὴν δὲ καλέσσατο λαὸν <persName key="achilles">Ἀχιλλεύς</persName>·</l>
+                    <l n="55">τῷ γὰρ ἐπὶ φρεσὶ θῆκε <addName type="descriptor" key="hera">θεὰ</addName> <addName type="epithet" key="hera">λευκώλενος</addName> <persName key="hera">Ἥρη</persName>·</l>
+                    <l n="56">κήδετο γὰρ <addName type="group name" key="danaan">Δαναῶν</addName>, ὅτι ῥα θνήσκοντας ὁρᾶτο.</l>
+                    <l n="57">οἳ δʼ ἐπεὶ οὖν ἤγερθεν ὁμηγερέες τε γένοντο,</l>
+                    <l n="58">τοῖσι δʼ ἀνιστάμενος μετέφη <addName type="epithet" key="achilles">πόδας ὠκὺς</addName> <persName key="achilles">Ἀχιλλεύς</persName>·</l>
+                    <q>
+                        <l n="59"><addName type="epithet-lineage" key="agamemnon">Ἀτρεΐδη</addName> νῦν ἄμμε παλιμπλαγχθέντας ὀΐω</l>
+                        <l n="60">ἂψ ἀπονοστήσειν, εἴ κεν <addName type="epithet" key="thanatos">θάνατόν</addName> γε φύγοιμεν,</l>
+                        <l n="61">εἰ δὴ ὁμοῦ πόλεμός τε δαμᾷ καὶ λοιμὸς <addName type="group name" key="achaean">Ἀχαιούς</addName>·</l>
+                        <l n="62">ἀλλʼ ἄγε δή τινα μάντιν ἐρείομεν ἢ ἱερῆα</l>
+                        <l n="63">ἢ καὶ ὀνειροπόλον, καὶ γάρ τʼ ὄναρ ἐκ <persName key="zeus">Διός</persName> ἐστιν,</l>
+                        <l n="64">ὅς κʼ εἴποι ὅ τι τόσσον ἐχώσατο <addName type="epithet" key="apollo">Φοῖβος</addName> <persName key="apollo">Ἀπόλλων</persName>,</l>
+                        <l n="65">εἴτʼ ἄρʼ ὅ γʼ εὐχωλῆς ἐπιμέμφεται ἠδʼ ἑκατόμβης,</l>
+                        <l n="66">αἴ κέν πως ἀρνῶν κνίσης αἰγῶν τε τελείων</l>
+                        <l n="67">βούλεται ἀντιάσας ἡμῖν ἀπὸ λοιγὸν ἀμῦναι.</l>
+                    </q>
+                    <milestone ed="p" n="68" unit="card"/>
+                    <l n="68">
+                        <milestone ed="P" unit="para"/>ἤτοι ὅ γʼ ὣς εἰπὼν κατʼ ἄρʼ ἕζετο· τοῖσι δʼ ἀνέστη</l>
+                    <l n="69"><persName key="calchas">Κάλχας</persName> <addName type="epithet-lineage" key="calchas">Θεστορίδης</addName> <addName type="epithet" key="calchas">οἰωνοπόλων ὄχʼ ἄριστος</addName>,</l>
+                    <l n="70">ὃς ᾔδη τά τʼ ἐόντα τά τʼ ἐσσόμενα πρό τʼ ἐόντα,</l>
+                    <l n="71">καὶ νήεσσʼ ἡγήσατʼ <addName type="group name" key="achaean">Ἀχαιῶν</addName> <placeName key="troy">Ἴλιον</placeName> εἴσω</l>
+                    <l n="72">ἣν διὰ μαντοσύνην, τήν οἱ πόρε <addName type="epithet" key="apollo">Φοῖβος</addName> <persName key="apollo">Ἀπόλλων</persName>·</l>
+                    <l n="73">ὅ σφιν ἐὺ φρονέων ἀγορήσατο καὶ μετέειπεν·</l>
+                    <q>
+                        <l n="74">ὦ <persName key="achilles">Ἀχιλεῦ</persName> κέλεαί με <addName type="descriptor" key="achilles"><persName key="zeus">Διῒ</persName> φίλε</addName> μυθήσασθαι</l>
+                        <l n="75">μῆνιν <persName key="apollo">Ἀπόλλωνος</persName> <addName type="epithet" key="apollo">ἑκατηβελέταο ἄνακτος</addName>·</l>
+                        <l n="76">τοὶ γὰρ ἐγὼν ἐρέω· σὺ δὲ σύνθεο καί μοι ὄμοσσον</l>
+                        <l n="77">ἦ μέν μοι πρόφρων ἔπεσιν καὶ χερσὶν ἀρήξειν·</l>
+                        <l n="78">ἦ γὰρ ὀΐομαι ἄνδρα χολωσέμεν, ὃς μέγα πάντων</l>
+                        <l n="79"><addName type="group name" key="argive">Ἀργείων</addName> κρατέει καί οἱ πείθονται <addName type="group name" key="achaean">Ἀχαιοί</addName>·</l>
+                        <l n="80">κρείσσων γὰρ βασιλεὺς ὅτε χώσεται ἀνδρὶ χέρηϊ·</l>
+                        <l n="81">εἴ περ γάρ τε χόλον γε καὶ αὐτῆμαρ καταπέψῃ,</l>
+                        <l n="82">ἀλλά τε καὶ μετόπισθεν ἔχει κότον, ὄφρα τελέσσῃ,</l>
+                        <l n="83">ἐν στήθεσσιν ἑοῖσι· σὺ δὲ φράσαι εἴ με σαώσεις.</l>
+                    </q>
+                    <l n="84">
+                        <milestone ed="P" unit="para"/>τὸν δʼ ἀπαμειβόμενος προσέφη <addName type="epithet" key="">πόδας ὠκὺς</addName> <persName key="achilles">Ἀχιλλεύς</persName>·</l>
+                    <q>
+                        <l n="85">θαρσήσας μάλα εἰπὲ θεοπρόπιον ὅ τι οἶσθα·</l>
+                        <l n="86">οὐ μὰ γὰρ <persName key="apollo">Ἀπόλλωνα</persName> <addName type="descriptor" key="apollo">Διῒ φίλον</addName>, ᾧ τε σὺ <persName key="calchas">Κάλχαν</persName></l>
+                        <l n="87">εὐχόμενος <addName type="group name" key="danaan">Δαναοῖσι</addName> θεοπροπίας ἀναφαίνεις,</l>
+                        <l n="88">οὔ τις ἐμεῦ ζῶντος καὶ ἐπὶ χθονὶ δερκομένοιο</l>
+                        <l n="89">σοὶ κοίλῃς παρὰ νηυσί βαρείας χεῖρας ἐποίσει</l>
+                        <l n="90">συμπάντων <addName type="group name" key="danaan">Δαναῶν</addName>, οὐδʼ ἢν <persName key="agamemnon">Ἀγαμέμνονα</persName> εἴπῃς,</l>
+                        <l n="91">ὃς νῦν <addName type="descriptor" key="agamemnon">πολλὸν ἄριστος <addName type="group name" key="achaean">Ἀχαιῶν</addName></addName> εὔχεται εἶναι.</l></q>
+                    <milestone ed="p" n="92" unit="card"/> 
+                    <l n="92">
+                        <milestone ed="P" unit="para"/>καὶ τότε δὴ θάρσησε καὶ ηὔδα μάντις <addName type="descriptor" key="calchas" definition="peerless">ἀμύμων</addName>·</l>
+                    <q>
+                        <l n="93">οὔ τʼ ἄρ ὅ γʼ εὐχωλῆς ἐπιμέμφεται οὐδʼ ἑκατόμβης,</l>
+                        <l n="94">ἀλλʼ ἕνεκʼ ἀρητῆρος ὃν ἠτίμησʼ <persName key="agamemnon">Ἀγαμέμνων</persName>,</l>
+                        <l n="95">οὐδʼ ἀπέλυσε θύγατρα καὶ οὐκ ἀπεδέξατʼ ἄποινα,</l>
+                        <l n="96">τοὔνεκʼ ἄρʼ ἄλγεʼ ἔδωκεν <addName type="epithet" key="apollo">ἑκηβόλος</addName> ἠδʼ ἔτι δώσει·</l>
+                        <l n="97">οὐδʼ ὅ γε πρὶν <addName type="group name" key="danaan">Δαναοῖσιν</addName> ἀεικέα λοιγὸν ἀπώσει</l>
+                        <l n="98">πρίν γʼ ἀπὸ πατρὶ φίλῳ δόμεναι <addName type="descriptor" key="chryseis">ἑλικώπιδα</addName> <addName type="descriptor" key="chryseis">κούρην</addName></l>
+                        <l n="99">ἀπριάτην ἀνάποινον, ἄγειν θʼ ἱερὴν ἑκατόμβην</l>
+                        <l n="100">ἐς <placeName key="chryse">Χρύσην</placeName>· τότε κέν μιν ἱλασσάμενοι πεπίθοιμεν.</l>
+                    </q>
+                    <l n="101">
+                        <milestone ed="P" unit="para"/>ἤτοι ὅ γʼ ὣς εἰπὼν κατʼ ἄρʼ ἕζετο· τοῖσι δʼ ἀνέστη</l>
+                        <l n="102"><addName type="descriptor" key="agamemnon" definition="hero,warrior">ἥρως</addName> <addName type="epithet-lineage" key="agamemnon">Ἀτρεΐδης</addName> <addName type="epithet" key="agamemnon" definition="wide-ruling">εὐρὺ κρείων</addName> <persName key="agamemnon">Ἀγαμέμνων</persName></l>
+                        <l n="103">ἀχνύμενος· μένεος δὲ μέγα φρένες ἀμφιμέλαιναι</l>
+                        <l n="104">πίμπλαντʼ, ὄσσε δέ οἱ πυρὶ λαμπετόωντι ἐΐκτην·</l>
+                        <l n="105"><persName key="calchas">Κάλχαντα</persName> πρώτιστα κάκʼ ὀσσόμενος προσέειπε·</l>
+                        <q>
+                        <l n="106"><addName type="descriptor" key="calchas" definition="phrophet of evil">μάντι κακῶν</addName> οὐ πώ ποτέ μοι τὸ κρήγυον εἶπας·</l>
+                        <l n="107">αἰεί τοι τὰ κάκʼ ἐστὶ φίλα φρεσὶ μαντεύεσθαι,</l>
+                        <l n="108">ἐσθλὸν δʼ οὔτέ τί πω εἶπας ἔπος οὔτʼ ἐτέλεσσας·</l>
+                        <l n="109">καὶ νῦν ἐν <addName type="group name" key="danaan">Δαναοῖσι</addName> θεοπροπέων ἀγορεύεις</l>
+                        <l n="110">ὡς δὴ τοῦδʼ ἕνεκά σφιν <addName type="epithet" key="apollo">ἑκηβόλος</addName> ἄλγεα τεύχει,</l>
+                        <l n="111">οὕνεκʼ ἐγὼ <addName type="epithet-lineage" key="chryseis">κούρης Χρυσηΐδος</addName> ἀγλάʼ ἄποινα</l>
+                        <l n="112">οὐκ ἔθελον δέξασθαι, ἐπεὶ πολὺ βούλομαι αὐτὴν</l>
+                        <l n="113">οἴκοι ἔχειν· καὶ γάρ ῥα <persName key="clytemnestra">Κλυταιμνήστρης</persName> προβέβουλα</l>
+                        <l n="114"><addName type="descriptor" key="clytemnestra" definition="wedded wife">κουριδίης ἀλόχου</addName>, ἐπεὶ οὔ ἑθέν ἐστι χερείων,</l>
+                        <l n="115">οὐ δέμας οὐδὲ φυήν, οὔτʼ ἂρ φρένας οὔτέ τι ἔργα.</l>
+                        <l n="116">ἀλλὰ καὶ ὧς ἐθέλω δόμεναι πάλιν εἰ τό γʼ ἄμεινον·</l>
+                        <l n="117">βούλομʼ ἐγὼ λαὸν σῶν ἔμμεναι ἢ ἀπολέσθαι·</l>
+                        <l n="118">αὐτὰρ ἐμοὶ γέρας αὐτίχʼ ἑτοιμάσατʼ ὄφρα μὴ οἶος</l>
+                        <l n="119"><addName type="group name" key="argive">Ἀργείων</addName> ἀγέραστος ἔω, ἐπεὶ οὐδὲ ἔοικε·</l>
+                        <l n="120">λεύσσετε γὰρ τό γε πάντες ὅ μοι γέρας ἔρχεται ἄλλῃ.</l>
+                    </q>
+                    <l n="121">
+                        <milestone ed="P" unit="para"/>τὸν δʼ ἠμείβετʼ ἔπειτα <addName type="descriptor" key="achilles">ποδάρκης</addName> <addName type="descriptor" key="achilles">δῖος</addName> <persName key="achilles">Ἀχιλλεύς</persName>·</l>
+                    <q><l n="122"><addName type="epithet-lineage" key="">Ἀτρεΐδη</addName> <addName type="descriptor" key="agamemnon">κύδιστε</addName> <addName type="descriptor" key="agamemnon">φιλοκτεανώτατε πάντων</addName>,</l>
+                        <l n="123">πῶς γάρ τοι δώσουσι γέρας <addName type="epithet" key="achaean">μεγάθυμοι</addName> <addName type="group name" key="achaean">Ἀχαιοί</addName>;</l>
+                        <l n="124">οὐδέ τί που ἴδμεν ξυνήϊα κείμενα πολλά·</l>
+                        <l n="125">ἀλλὰ τὰ μὲν πολίων ἐξεπράθομεν, τὰ δέδασται,</l>
+                        <l n="126">λαοὺς δʼ οὐκ ἐπέοικε παλίλλογα ταῦτʼ ἐπαγείρειν.</l>
+                        <l n="127">ἀλλὰ σὺ μὲν νῦν τήνδε <addName type="descriptor" key="apollo">θεῷ</addName> πρόες· αὐτὰρ <addName type="group name" key="achaean">Ἀχαιοὶ</addName></l>
+                        <l n="128">τριπλῇ τετραπλῇ τʼ ἀποτείσομεν, αἴ κέ ποθι <persName key="zeus">Ζεὺς</persName></l>
+                        <l n="129">δῷσι πόλιν <placeName key="troy">Τροίην</placeName> <addName type="descriptor" key="troy">εὐτείχεον</addName> ἐξαλαπάξαι.</l>
+                    </q>
+                    <milestone ed="p" n="130" unit="card"/>
+                    <l n="130">
+                        <milestone ed="P" unit="para"/>τὸν δʼ ἀπαμειβόμενος προσέφη <addName type="nobility" key="agamemnon">κρείων</addName> <persName key="agamemnon">Ἀγαμέμνων</persName>·</l>
+                    <q>
+                        <l n="131">μὴ δʼ οὕτως <addName type="descriptor" key="achilles">ἀγαθός</addName> περ ἐὼν <addName type="descriptor" key="achilles">θεοείκελʼ</addName> <persName key="achilles">Ἀχιλλεῦ</persName></l>
+                        <l n="132">κλέπτε νόῳ, ἐπεὶ οὐ παρελεύσεαι οὐδέ με πείσεις.</l>
+                        <l n="133">ἦ ἐθέλεις ὄφρʼ αὐτὸς ἔχῃς γέρας, αὐτὰρ ἔμʼ αὔτως</l>
+                        <l n="134">ἧσθαι δευόμενον, κέλεαι δέ με τήνδʼ ἀποδοῦναι;</l>
+                        <l n="135">ἀλλʼ εἰ μὲν δώσουσι γέρας <addName type="descriptor" key="achaean">μεγάθυμοι</addName> <addName type="group name" key="achaean">Ἀχαιοὶ</addName></l>
+                        <l n="136">ἄρσαντες κατὰ θυμὸν ὅπως ἀντάξιον ἔσται·</l>
+                        <l n="137">εἰ δέ κε μὴ δώωσιν ἐγὼ δέ κεν αὐτὸς ἕλωμαι</l>
+                        <l n="138">ἢ τεὸν ἢ <persName key="telamonian ajax">Αἴαντος</persName> ἰὼν γέρας, ἢ <persName key="odysseus">Ὀδυσῆος</persName></l>
+                        <l n="139">ἄξω ἑλών· ὃ δέ κεν κεχολώσεται ὅν κεν ἵκωμαι.</l>
+                        <l n="140">ἀλλʼ ἤτοι μὲν ταῦτα μεταφρασόμεσθα καὶ αὖτις,</l>
+                        <l n="141">νῦν δʼ ἄγε νῆα μέλαιναν ἐρύσσομεν εἰς ἅλα δῖαν,</l>
+                        <l n="142">ἐν δʼ ἐρέτας ἐπιτηδὲς ἀγείρομεν, ἐς δʼ ἑκατόμβην</l>
+                        <l n="143">θείομεν, ἂν δʼ αὐτὴν <addName type="epithet-lineage" key="chryseis">Χρυσηΐδα</addName> <addName type="descriptor" key="chryseis">καλλιπάρῃον</addName></l>
+                        <l n="144">βήσομεν· εἷς δέ τις ἀρχὸς ἀνὴρ βουληφόρος ἔστω,</l>
+                        <l n="145">ἢ <persName key="telamonian ajax">Αἴας</persName> ἢ <persName key="idomeneus">Ἰδομενεὺς</persName> ἢ <addName type="descriptor" key="">δῖος</addName> <persName key="odysseus">Ὀδυσσεὺς</persName></l>
+                        <l n="146">ἠὲ σὺ <addName type="epithet-lineage" key="achilles">Πηλεΐδη</addName> <addName type="descriptor" key="achilles">πάντων ἐκπαγλότατʼ ἀνδρῶν</addName>,</l>
+                        <l n="147">ὄφρʼ ἥμιν ἑκάεργον ἱλάσσεαι ἱερὰ ῥέξας.</l>
+                    </q>
+                    <l n="148">
+                        <milestone ed="P" unit="para"/>τὸν δʼ ἄρʼ ὑπόδρα ἰδὼν προσέφη <addName type="epithet" key="">πόδας ὠκὺς</addName> <persName key="achilles">Ἀχιλλεύς</persName>·</l>
+                    <q>
+                        <l n="149">ὤ μοι ἀναιδείην ἐπιειμένε κερδαλεόφρον</l>
+                        <l n="150">πῶς τίς τοι πρόφρων ἔπεσιν πείθηται <addName type="group name" key="achaean">Ἀχαιῶν</addName></l>
+                        <l n="151">ἢ ὁδὸν ἐλθέμεναι ἢ ἀνδράσιν ἶφι μάχεσθαι;</l>
+                        <l n="152">οὐ γὰρ ἐγὼ <addName type="group name" key="trojan">Τρώων</addName> ἕνεκʼ ἤλυθον αἰχμητάων</l>
+                        <l n="153">δεῦρο μαχησόμενος, ἐπεὶ οὔ τί μοι αἴτιοί εἰσιν·</l>
+                        <l n="154">οὐ γὰρ πώποτʼ ἐμὰς βοῦς ἤλασαν οὐδὲ μὲν ἵππους,</l>
+                        <l n="155">οὐδέ ποτʼ ἐν <placeName key="phthia">Φθίῃ</placeName> <addName type="epithet" key="phthia">ἐριβώλακι</addName> <addName type="epithet" key="phthia">βωτιανείρῃ</addName></l>
+                        <l n="156">καρπὸν ἐδηλήσαντʼ, ἐπεὶ ἦ μάλα πολλὰ μεταξὺ</l>
+                        <l n="157">οὔρεά τε σκιόεντα θάλασσά τε ἠχήεσσα·</l>
+                        <l n="158">ἀλλὰ σοὶ ὦ μέγʼ <addName type="descriptor" key="agamemnon">ἀναιδὲς</addName> ἅμʼ ἑσπόμεθʼ ὄφρα σὺ χαίρῃς,</l>
+                        <l n="159">τιμὴν ἀρνύμενοι <persName key="menelaus">Μενελάῳ</persName> σοί τε <addName type="descriptor" key="agamemnon">κυνῶπα</addName></l>
+                        <l n="160">πρὸς <addName type="group name" key="trojan">Τρώων</addName>· τῶν οὔ τι μετατρέπῃ οὐδʼ ἀλεγίζεις·</l>
+                        <l n="161">καὶ δή μοι γέρας αὐτὸς ἀφαιρήσεσθαι ἀπειλεῖς,</l>
+                        <l n="162">ᾧ ἔπι πολλὰ μόγησα, δόσαν δέ μοι <addName type="epithet-lineage" key="achaean">υἷες <addName type="group name" key="achaean">Ἀχαιῶν</addName></addName>.</l>
+                        <l n="163">οὐ μὲν σοί ποτε ἶσον ἔχω γέρας ὁππότʼ <addName type="group name" key="achaean">Ἀχαιοὶ</addName></l>
+                        <l n="164"><addName type="group name" key="trojan">Τρώων</addName> ἐκπέρσωσʼ εὖ ναιόμενον πτολίεθρον·</l>
+                        <l n="165">ἀλλὰ τὸ μὲν πλεῖον πολυάϊκος πολέμοιο</l>
+                        <l n="166">χεῖρες ἐμαὶ διέπουσʼ· ἀτὰρ ἤν ποτε δασμὸς ἵκηται,</l>
+                        <l n="167">σοὶ τὸ γέρας πολὺ μεῖζον, ἐγὼ δʼ ὀλίγον τε φίλον τε</l>
+                        <l n="168">ἔρχομʼ ἔχων ἐπὶ νῆας, ἐπεί κε κάμω πολεμίζων.</l>
+                        <l n="169">νῦν δʼ εἶμι <placeName key="phthia">Φθίην</placeName> δʼ, ἐπεὶ ἦ πολὺ φέρτερόν ἐστιν</l>
+                        <l n="170">οἴκαδʼ ἴμεν σὺν νηυσὶ <addName type="epithet" key="ship">κορωνίσιν</addName>, οὐδέ σʼ ὀΐω</l>
+                        <l n="171">ἐνθάδʼ ἄτιμος ἐὼν ἄφενος καὶ πλοῦτον ἀφύξειν.</l>
+                    </q>
+                    <milestone ed="p" n="172" unit="card"/>
+ <l n="172">
+                        <milestone ed="P" unit="para"/>τὸν δʼ ἠμείβετʼ ἔπειτα <addName type="epithet" key="">ἄναξ ἀνδρῶν</addName> <persName key="agamemnon">Ἀγαμέμνων</persName>·</l>
+                    <q><l n="173">φεῦγε μάλʼ εἴ τοι θυμὸς ἐπέσσυται, οὐδέ σʼ ἔγωγε</l>
+                    <l n="174">λίσσομαι εἵνεκʼ ἐμεῖο μένειν· πάρʼ ἔμοιγε καὶ ἄλλοι</l>
+                    <l n="175">οἵ κέ με τιμήσουσι, <addName type="epithet" key="zeus">μάλιστα δὲ μητίετα</addName> <persName key="zeus">Ζεύς</persName>.</l>
+                    <l n="176">ἔχθιστος δέ μοί ἐσσι <addName type="epithet-lineage" key="agamemnon">διοτρεφέων</addName> βασιλήων·</l>
+                    <l n="177">αἰεὶ γάρ τοι ἔρις τε φίλη πόλεμοί τε μάχαι τε·</l>
+                    <l n="178">εἰ μάλα καρτερός ἐσσι, θεός που σοὶ τό γʼ ἔδωκεν·</l>
+                    <l n="179">οἴκαδʼ ἰὼν σὺν νηυσί τε σῇς καὶ σοῖς ἑτάροισι</l>
+                    <l n="180"><addName type="group name" key="myrmidon">Μυρμιδόνεσσιν</addName> ἄνασσε, σέθεν δʼ ἐγὼ οὐκ ἀλεγίζω,</l>
+                    <l n="181">οὐδʼ ὄθομαι κοτέοντος· ἀπειλήσω δέ τοι ὧδε·</l>
+                    <l n="182">ὡς ἔμʼ ἀφαιρεῖται <addName type="epithet-lineage" key="chryseis">Χρυσηΐδα</addName> <addName type="epithet" key="apollo">Φοῖβος</addName> <persName key="apollo">Ἀπόλλων</persName>,</l>
+                    <l n="183">τὴν μὲν ἐγὼ σὺν νηΐ τʼ ἐμῇ καὶ ἐμοῖς ἑτάροισι</l>
+                    <l n="184">πέμψω, ἐγὼ δέ κʼ ἄγω <persName key="briseis">Βρισηΐδα</persName> <addName type="descriptor" key="briseis">καλλιπάρῃον</addName></l>
+                    <l n="185">αὐτὸς ἰὼν κλισίην δὲ τὸ σὸν γέρας ὄφρʼ ἐῢ εἰδῇς</l>
+                    <l n="186">ὅσσον φέρτερός εἰμι σέθεν, στυγέῃ δὲ καὶ ἄλλος</l>
+                    <l n="187">ἶσον ἐμοὶ φάσθαι καὶ ὁμοιωθήμεναι ἄντην.</l></q>
+                    <l n="188">
+                        <milestone ed="P" unit="para"/>ὣς φάτο· <addName key="achilles">Πηλεΐωνι</addName> δʼ ἄχος γένετʼ, ἐν δέ οἱ ἦτορ</l>
+                    <l n="189">στήθεσσιν λασίοισι διάνδιχα μερμήριξεν,</l>
+                    <l n="190">ἢ ὅ γε φάσγανον <addName type="epithet" key="sword">ὀξὺ</addName> ἐρυσσάμενος παρὰ μηροῦ</l>
+                    <l n="191">τοὺς μὲν ἀναστήσειεν, ὃ δʼ <addName type="epithet-lineage" key="agamemnon">Ἀτρεΐδην</addName> ἐναρίζοι,</l>
+                    <l n="192">ἦε χόλον παύσειεν ἐρητύσειέ τε θυμόν.</l>
+                    <l n="193">ἧος ὃ ταῦθʼ ὥρμαινε κατὰ φρένα καὶ κατὰ θυμόν,</l>
+                    <l n="194">ἕλκετο δʼ ἐκ κολεοῖο μέγα ξίφος, ἦλθε δʼ <persName key="athena">Ἀθήνη</persName></l>
+                    <l n="195"><addName type="epithet" key="ouranos">οὐρανόθεν</addName>· πρὸ γὰρ ἧκε <addName type="epithet" key="hera">θεὰ</addName> <addName type="epithet" key="hera">λευκώλενος</addName> <persName key="hera">Ἥρη</persName></l>
+                    <l n="196">ἄμφω ὁμῶς θυμῷ φιλέουσά τε κηδομένη τε·</l>
+                    <l n="197">στῆ δʼ ὄπιθεν, ξανθῆς δὲ κόμης ἕλε <addName type="epithet-lineage" key="achilles">Πηλεΐωνα</addName></l>
+                    <l n="198">οἴῳ φαινομένη· τῶν δʼ ἄλλων οὔ τις ὁρᾶτο·</l>
+                    <l n="199">θάμβησεν δʼ <persName key="achilles">Ἀχιλεύς</persName>, μετὰ δʼ ἐτράπετʼ, αὐτίκα δʼ ἔγνω</l>
+                    <l n="200"><addName type="epithet" key="athena">Παλλάδʼ</addName> <persName key="athena">Ἀθηναίην</persName>· <addName type="descriptor" key="athena" definition="her terrible eyes shining">δεινὼ δέ οἱ ὄσσε φάανθεν</addName>·</l>
+                    <l n="201">καί μιν φωνήσας ἔπεα πτερόεντα προσηύδα·</l>
+                    <q><l n="202">τίπτʼ αὖτʼ <addName type="epithet" key="zeus">αἰγιόχοιο</addName> <addName type="epithet-lineage" key="athena"><persName key="zeus">Διὸς</persName> τέκος</addName> εἰλήλουθας;</l>
+                    <l n="203">ἦ ἵνα ὕβριν ἴδῃ <persName key="agamemnon">Ἀγαμέμνονος</persName> <addName type="epithet-lineage" key="agamemnon">Ἀτρεΐδαο</addName>;</l>
+                    <l n="204">ἀλλʼ ἔκ τοι ἐρέω, τὸ δὲ καὶ τελέεσθαι ὀΐω·</l>
+                    <l n="205">ᾗς ὑπεροπλίῃσι τάχʼ ἄν ποτε θυμὸν ὀλέσσῃ.</l></q>
+                    <milestone ed="p" n="206" unit="card"/>
+                    <l n="206">
+                        <milestone ed="P" unit="para"/>τὸν δʼ αὖτε προσέειπε <addName type="descriptor" key="athena">θεὰ</addName> <addName type="epithet" key="athena">γλαυκῶπις</addName> <persName key="athena">Ἀθήνη</persName>·</l>
+                    <q><l n="207">ἦλθον ἐγὼ παύσουσα τὸ σὸν μένος, αἴ κε πίθηαι,</l>
+                    <l n="208"><addName type="epithet" key="ouranos">οὐρανόθεν</addName>· πρὸ δέ μʼ ἧκε <addName type="descriptor" key="hera">θεὰ</addName> <addName type="epithet" key="hera">λευκώλενος</addName> <persName key="hera">Ἥρη</persName></l>
+                    <l n="209">ἄμφω ὁμῶς θυμῷ φιλέουσά τε κηδομένη τε·</l>
+                    <l n="210">ἀλλʼ ἄγε λῆγʼ ἔριδος, μηδὲ ξίφος ἕλκεο χειρί·</l>
+                    <l n="211">ἀλλʼ ἤτοι ἔπεσιν μὲν ὀνείδισον ὡς ἔσεταί περ·</l>
+                    <l n="212">ὧδε γὰρ ἐξερέω, τὸ δὲ καὶ τετελεσμένον ἔσται·</l>
+                    <l n="213">καί ποτέ τοι τρὶς τόσσα παρέσσεται ἀγλαὰ δῶρα</l>
+                    <l n="214">ὕβριος εἵνεκα τῆσδε· σὺ δʼ ἴσχεο, πείθεο δʼ ἡμῖν.</l></q>
+                    <l n="215">
+                        <milestone ed="P" unit="para"/>τὴν δʼ ἀπαμειβόμενος προσέφη <addName type="epithet" key="">πόδας ὠκὺς</addName> <persName key="achilles">Ἀχιλλεύς</persName>·</l>
+                    <q>
+                        <l n="216">χρὴ μὲν σφωΐτερόν γε <addName type="descriptor" key="athena">θεὰ</addName> ἔπος εἰρύσσασθαι</l>
+                        <l n="217">καὶ μάλα περ θυμῷ κεχολωμένον· ὧς γὰρ ἄμεινον·</l>
+                        <l n="218">ὅς κε <addName type="group name" key="gods">θεοῖς</addName> ἐπιπείθηται μάλα τʼ ἔκλυον αὐτοῦ.</l>
+                    </q>
+                    <l n="219">
+                        <milestone ed="P" unit="para"/>ἦ καὶ ἐπʼ ἀργυρέῃ κώπῃ σχέθε χεῖρα βαρεῖαν,</l>
+                    <l n="220">ἂψ δʼ ἐς κουλεὸν ὦσε μέγα ξίφος, οὐδʼ ἀπίθησε</l>
+                    <l n="221">μύθῳ <persName key="athena">Ἀθηναίης</persName>· ἣ δʼ <placeName key="olympus">Οὔλυμπον</placeName> δὲ βεβήκει</l>
+                    <l n="222">δώματʼ ἐς <addName type="epithet" key="zeus">αἰγιόχοιο</addName> <persName key="zeus">Διὸς</persName> μετὰ δαίμονας ἄλλους.</l>
+                    <l n="223">
+                        <milestone ed="P" unit="para"/><addName type="epithet-lineage" key="achilles">Πηλεΐδης</addName> δʼ ἐξαῦτις ἀταρτηροῖς ἐπέεσσιν</l>
+                    <l n="224"><addName type="epithet-lineage" key="agamemnon">Ἀτρεΐδην</addName> προσέειπε, καὶ οὔ πω λῆγε χόλοιο·</l>
+                    <q>
+                        <l n="225">οἰνοβαρές, κυνὸς ὄμματʼ ἔχων, κραδίην δʼ ἐλάφοιο,</l>
+                        <l n="226">οὔτέ ποτʼ ἐς πόλεμον ἅμα λαῷ θωρηχθῆναι</l>
+                        <l n="227">οὔτε λόχον δʼ ἰέναι σὺν ἀριστήεσσιν <addName type="group name" key="achaean">Ἀχαιῶν</addName></l>
+                        <l n="228">τέτληκας θυμῷ· τὸ δέ τοι <addName type="epithet" key="ker">κὴρ</addName> εἴδεται εἶναι.</l>
+                        <l n="229">ἦ πολὺ λώϊόν ἐστι κατὰ στρατὸν εὐρὺν <addName type="group name" key="achaean">Ἀχαιῶν</addName></l>
+                        <l n="230">δῶρʼ ἀποαιρεῖσθαι ὅς τις σέθεν ἀντίον εἴπῃ·</l>
+                        <l n="231"><addName type="epithet" key="agamemnon">δημοβόρος βασιλεὺς</addName> ἐπεὶ οὐτιδανοῖσιν ἀνάσσεις·</l>
+                        <l n="232">ἦ γὰρ ἂν <addName type="epithet-lineage" key="agamemnon">Ἀτρεΐδη</addName> νῦν ὕστατα λωβήσαιο.</l>
+                        <l n="233">ἀλλʼ ἔκ τοι ἐρέω καὶ ἐπὶ μέγαν ὅρκον ὀμοῦμαι·</l>
+                        <l n="234">ναὶ μὰ τόδε σκῆπτρον, τὸ μὲν οὔ ποτε φύλλα καὶ ὄζους</l>
+                        <l n="235">φύσει, ἐπεὶ δὴ πρῶτα τομὴν ἐν ὄρεσσι λέλοιπεν,</l>
+                        <l n="236">οὐδʼ ἀναθηλήσει· περὶ γάρ ῥά ἑ χαλκὸς ἔλεψε</l>
+                        <l n="237">φύλλά τε καὶ φλοιόν· νῦν αὖτέ μιν <addName type="epithet-lineage" key="achaean">υἷες <addName type="group name" key="achaean">Ἀχαιῶν</addName></addName></l>
+                        <l n="238">ἐν παλάμῃς φορέουσι δικασπόλοι, οἵ τε θέμιστας</l>
+                        <l n="239">πρὸς <persName key="zeus">Διὸς</persName> εἰρύαται· ὃ δέ τοι μέγας ἔσσεται ὅρκος·</l>
+                        <l n="240">ἦ ποτʼ <persName key="achilles">Ἀχιλλῆος</persName> ποθὴ ἵξεται <addName type="epithet-lineage" key="achaean">υἷας <addName type="group name" key="achaean">Ἀχαιῶν</addName></addName></l>
+                        <l n="241">σύμπαντας· τότε δʼ οὔ τι δυνήσεαι ἀχνύμενός περ</l>
+                        <l n="242">χραισμεῖν, εὖτʼ ἂν πολλοὶ ὑφʼ <addName type="epithet" key="hector"><persName key="hector">Ἕκτορος</persName> ἀνδροφόνοιο</addName></l>
+                        <l n="243">θνήσκοντες πίπτωσι· σὺ δʼ ἔνδοθι θυμὸν ἀμύξεις</l>
+                        <l n="244">χωόμενος ὅ τʼ <addName type="descriptor" key="achilles">ἄριστον <addName type="group name" key="achaean">Ἀχαιῶν</addName></addName> οὐδὲν ἔτισας.</l>
+                    </q>
+                    <milestone ed="p" n="245" unit="card"/>
+                    <l n="245">
+                        <milestone ed="P" unit="para"/>ὣς φάτο <addName type="epithet-lineage" key="achilles">Πηλεΐδης</addName>, ποτὶ δὲ σκῆπτρον βάλε <addName type="epithet" key="gaia">γαίῃ</addName></l>
+                    <l n="246">χρυσείοις ἥλοισι πεπαρμένον, ἕζετο δʼ αὐτός·</l>
+                    <l n="247"><addName type="epithet-lineage" key="agamemnon">Ἀτρεΐδης</addName> δʼ ἑτέρωθεν ἐμήνιε· τοῖσι δὲ <persName key="nestor">Νέστωρ</persName></l>
+                    <l n="248"><addName type="epithet" key="nestor">ἡδυεπὴς</addName> <addName type="epithet" key="nestor">ἀνόρουσε λιγὺς <addName type="group name" key="pylian">Πυλίων</addName> ἀγορητής</addName>,</l>
+                    <l n="249"><addName type="descriptor" key="nestor">τοῦ καὶ ἀπὸ γλώσσης μέλιτος γλυκίων ῥέεν αὐδή</addName>·</l>
+                    <l n="250">τῷ δʼ ἤδη δύο μὲν γενεαὶ μερόπων ἀνθρώπων</l>
+                    <l n="251">ἐφθίαθʼ, οἵ οἱ πρόσθεν ἅμα τράφεν ἠδʼ ἐγένοντο</l>
+                    <l n="252">ἐν <placeName key="pylos">Πύλῳ</placeName> <addName type="descriptor" key="pylos">ἠγαθέῃ</addName>, μετὰ δὲ τριτάτοισιν ἄνασσεν·</l>
+                    <l n="253">ὅ σφιν ἐὺ φρονέων ἀγορήσατο καὶ μετέειπεν·</l>
+                    <q>
+                        <l n="254">ὦ πόποι ἦ μέγα πένθος <placeName key="achaea">Ἀχαιΐδα</placeName> γαῖαν ἱκάνει·</l>
+                        <l n="255">ἦ κεν γηθήσαι <persName key="priam">Πρίαμος</persName> <addName type="epithet-lineage" key="sons of priam">Πριάμοιό τε παῖδες</addName></l>
+                        <l n="256">ἄλλοι τε <placeName key="troy">Τρῶες</placeName> μέγα κεν κεχαροίατο θυμῷ</l>
+                        <l n="257">εἰ σφῶϊν τάδε πάντα πυθοίατο μαρναμένοιϊν,</l>
+                        <l n="258"><addName type="epithet" key="achilles,agamemnon">οἳ περὶ μὲν βουλὴν <addName type="group name" key="danaan">Δαναῶν</addName>, περὶ δʼ ἐστὲ μάχεσθαι</addName>.</l><!--Monroe: 'chief among Danaans in counsel and in war'-->
+                        <l n="259">ἀλλὰ πίθεσθʼ· ἄμφω δὲ νεωτέρω ἐστὸν ἐμεῖο·</l>
+                        <l n="260">ἤδη γάρ ποτʼ ἐγὼ καὶ ἀρείοσιν ἠέ περ ὑμῖν</l>
+                        <l n="261">ἀνδράσιν ὡμίλησα, καὶ οὔ ποτέ μʼ οἵ γʼ ἀθέριζον.</l>
+                        <l n="262">οὐ γάρ πω τοίους ἴδον ἀνέρας οὐδὲ ἴδωμαι,</l>
+                        <l n="263">οἷον <persName key="peirithous">Πειρίθοόν</persName> τε <persName key="dryas">Δρύαντά</persName> τε <addName type="epithet" key="dryas">ποιμένα λαῶν</addName></l>
+                        <l n="264"><persName key="kaeneus">Καινέα</persName> τʼ <persName key="exadius">Ἐξάδιόν</persName> τε καὶ <addName type="epithet" key="polyphemus">ἀντίθεον</addName> <persName key="polyphemus">Πολύφημον</persName></l>
+                        <l n="265"><persName key="theseus">Θησέα</persName> τʼ <addName type="epithet-lineage" key="theseus">Αἰγεΐδην</addName>, <addName type="descriptor" key="theseus">ἐπιείκελον ἀθανάτοισιν</addName>·</l>
+                        <l n="266">κάρτιστοι δὴ κεῖνοι ἐπιχθονίων τράφεν ἀνδρῶν·</l>
+                        <l n="267">κάρτιστοι μὲν ἔσαν καὶ καρτίστοις ἐμάχοντο</l>
+                        <l n="268">φηρσὶν ὀρεσκῴοισι καὶ ἐκπάγλως ἀπόλεσσαν.</l>
+                        <l n="269">καὶ μὲν τοῖσιν ἐγὼ μεθομίλεον ἐκ <placeName key="pylos">Πύλου</placeName> ἐλθὼν</l>
+                        <l n="270">τηλόθεν ἐξ ἀπίης γαίης· καλέσαντο γὰρ αὐτοί·</l>
+                        <l n="271">καὶ μαχόμην κατʼ ἔμʼ αὐτὸν ἐγώ· κείνοισι δʼ ἂν οὔ τις</l>
+                        <l n="272">τῶν οἳ νῦν βροτοί εἰσιν ἐπιχθόνιοι μαχέοιτο·</l>
+                        <l n="273">καὶ μέν μευ βουλέων ξύνιεν πείθοντό τε μύθῳ·</l>
+                        <l n="274">ἀλλὰ πίθεσθε καὶ ὔμμες, ἐπεὶ πείθεσθαι ἄμεινον·</l>
+                        <l n="275">μήτε σὺ τόνδʼ ἀγαθός περ ἐὼν ἀποαίρεο κούρην,</l>
+                        <l n="276">ἀλλʼ ἔα ὥς οἱ πρῶτα δόσαν γέρας <addName type="epithet-lineage" key="achaean">υἷες <addName type="group name" key="achaean">Ἀχαιῶν</addName></addName>·</l>
+                        <l n="277">μήτε σὺ <addName type="epithet-lineage" key="achilles">Πηλείδη</addName> ἔθελʼ ἐριζέμεναι βασιλῆϊ</l>
+                        <l n="278">ἀντιβίην, ἐπεὶ οὔ ποθʼ ὁμοίης ἔμμορε τιμῆς</l>
+                        <l n="279"><addName type="epithet" key="agamemnon">σκηπτοῦχος βασιλεύς</addName><!--Monroe: 'sceptre-holding king'-->, ᾧ τε <persName key="zeus">Ζεὺς</persName> κῦδος ἔδωκεν.</l>
+                        <l n="280">εἰ δὲ σὺ καρτερός ἐσσι <addName type="descriptor" key="thetis">θεὰ</addName> δέ σε γείνατο μήτηρ,</l>
+                        <l n="281">ἀλλʼ ὅ γε φέρτερός ἐστιν ἐπεὶ πλεόνεσσιν ἀνάσσει.</l>
+                        <l n="282"><addName type="epithet-lineage" key="agamemnon">Ἀτρεΐδη</addName> σὺ δὲ παῦε τεὸν μένος· αὐτὰρ ἔγωγε</l>
+                        <l n="283">λίσσομʼ <persName key="achilles">Ἀχιλλῆϊ</persName> μεθέμεν χόλον, ὃς μέγα πᾶσιν</l>
+                        <l n="284">ἕρκος <addName type="group name" key="achaean">Ἀχαιοῖσιν</addName> πέλεται πολέμοιο κακοῖο.</l>
+                    </q>
+                    <milestone ed="p" n="285" unit="card"/>
+                    <l n="285">
+                        <milestone ed="P" unit="para"/>τὸν δʼ ἀπαμειβόμενος προσέφη <addName type="nobility" key="agamemnon">κρείων</addName> <persName key="agamemnon">Ἀγαμέμνων</persName>·</l>
+                    <q>
+                        <l n="286">ναὶ δὴ ταῦτά γε πάντα <addName type="descriptor" key="nestor">γέρον</addName> κατὰ μοῖραν ἔειπες·</l>
+                        <l n="287">ἀλλʼ ὅδʼ ἀνὴρ ἐθέλει περὶ πάντων ἔμμεναι ἄλλων,</l>
+                        <l n="288">πάντων μὲν κρατέειν ἐθέλει, πάντεσσι δʼ ἀνάσσειν,</l>
+                        <l n="289">πᾶσι δὲ σημαίνειν, ἅ τινʼ οὐ πείσεσθαι ὀΐω·</l>
+                        <l n="290">εἰ δέ μιν αἰχμητὴν ἔθεσαν <addName type="descriptor" key="gods">θεοὶ αἰὲν ἐόντες</addName><!--Monroe: 'gods who live forever'--></l>
+                        <l n="291">τοὔνεκά οἱ προθέουσιν ὀνείδεα μυθήσασθαι;</l>
+                    </q>
+                    <l n="292">
+                        <milestone ed="P" unit="para"/>τὸν δʼ ἄρʼ ὑποβλήδην ἠμείβετο <addName type="descriptor" key="achilles">δῖος</addName> <persName key="achilles">Ἀχιλλεύς</persName>·</l>
+                    <q>
+                        <l n="293">ἦ γάρ κεν δειλός τε καὶ οὐτιδανὸς καλεοίμην</l>
+                        <l n="294">εἰ δὴ σοὶ πᾶν ἔργον ὑπείξομαι ὅττί κεν εἴπῃς·</l>
+                        <l n="295">ἄλλοισιν δὴ ταῦτʼ ἐπιτέλλεο, μὴ γὰρ ἔμοιγε</l>
+                        <l n="296">σήμαινʼ· οὐ γὰρ ἔγωγʼ ἔτι σοὶ πείσεσθαι ὀΐω.</l>
+                        <l n="297">ἄλλο δέ τοι ἐρέω, σὺ δʼ ἐνὶ φρεσὶ βάλλεο σῇσι·</l>
+                        <l n="298">χερσὶ μὲν οὔ τοι ἔγωγε μαχήσομαι εἵνεκα κούρης</l>
+                        <l n="299">οὔτε σοὶ οὔτέ τῳ ἄλλῳ, ἐπεί μʼ ἀφέλεσθέ γε δόντες·</l>
+                        <l n="300">τῶν δʼ ἄλλων ἅ μοί ἐστι θοῇ παρὰ νηῒ μελαίνῃ</l>
+                        <l n="301">τῶν οὐκ ἄν τι φέροις ἀνελὼν ἀέκοντος ἐμεῖο·</l>
+                        <l n="302">εἰ δʼ ἄγε μὴν πείρησαι ἵνα γνώωσι καὶ οἵδε·</l>
+                        <l n="303">αἶψά τοι αἷμα κελαινὸν ἐρωήσει περὶ δουρί.</l></q>
+                    <l n="304">
+                        <milestone ed="P" unit="para"/>ὣς τώ γʼ ἀντιβίοισι μαχεσσαμένω ἐπέεσσιν</l>
+                    <l n="305">ἀνστήτην, λῦσαν δʼ ἀγορὴν παρὰ νηυσὶν <addName type="group name" key="achaean">Ἀχαιῶν</addName>·</l>
+                    <l n="306"><addName type="epithet-lineage" key="achilles">Πηλεΐδης</addName> μὲν ἐπὶ κλισίας καὶ νῆας ἐΐσας</l>
+                    <l n="307">ἤϊε σύν τε <addName type="epithet-lineage" key="patroclus">Μενοιτιάδῃ</addName> καὶ οἷς ἑτάροισιν·</l>
+                    <l n="308"><addName type="epithet-lineage" key="agamemnon">Ἀτρεΐδης</addName> δʼ ἄρα νῆα θοὴν ἅλα δὲ προέρυσσεν,</l>
+                    <l n="309">ἐν δʼ ἐρέτας ἔκρινεν ἐείκοσιν, ἐς δʼ ἑκατόμβην</l>
+                    <l n="310">βῆσε θεῷ, ἀνὰ δὲ <addName type="epithet-lineage" key="chriseis">Χρυσηΐδα</addName> <addName type="descriptor" key="chriseis">καλλιπάρῃον</addName></l>
+                    <l n="311">εἷσεν ἄγων· ἐν δʼ ἀρχὸς ἔβη <addName type="epithet" key="odysseus">πολύμητις</addName> <persName key="odysseus">Ὀδυσσεύς</persName>.</l>
+                    <milestone ed="p" n="312" unit="card"/>
+                    <l n="312">
+                        <milestone ed="P" unit="para"/>οἳ μὲν ἔπειτʼ ἀναβάντες ἐπέπλεον <addName type="epithet" key="sea">ὑγρὰ κέλευθα</addName>,</l>
+                    <l n="313">λαοὺς δʼ <addName type="epithet-lineage" key="agamemnon">Ἀτρεΐδης</addName> ἀπολυμαίνεσθαι ἄνωγεν·</l>
+                    <l n="314">οἳ δʼ ἀπελυμαίνοντο καὶ εἰς ἅλα λύματα βάλλον,</l>
+                    <l n="315">ἕρδον δʼ <persName key="apollo">Ἀπόλλωνι</persName> τεληέσσας ἑκατόμβας</l>
+                    <l n="316">ταύρων ἠδʼ αἰγῶν παρὰ θῖνʼ ἁλὸς ἀτρυγέτοιο·</l>
+                    <l n="317">κνίση δʼ <addName type="epithet" key="ouranos">οὐρανὸν</addName> ἷκεν ἑλισσομένη περὶ καπνῷ.</l>
+                    <l n="318">
+                        <milestone ed="P" unit="para"/>ὣς οἳ μὲν τὰ πένοντο κατὰ στρατόν· οὐδʼ <persName key="agamemnon">Ἀγαμέμνων</persName></l>
+                    <l n="319">λῆγʼ ἔριδος τὴν πρῶτον ἐπηπείλησʼ <persName key="achilles">Ἀχιλῆϊ</persName>,</l>
+                    <l n="320">ἀλλʼ ὅ γε <persName key="talthybius">Ταλθύβιόν</persName> τε καὶ <persName key="eurybates">Εὐρυβάτην</persName> προσέειπε,</l>
+                    <l n="321">τώ οἱ ἔσαν κήρυκε καὶ ὀτρηρὼ θεράποντε·</l>
+                    <q>
+                        <l n="322">ἔρχεσθον κλισίην <addName type="epithet-lineage" key="achilles">Πηληϊάδεω</addName> <persName key="achilles">Ἀχιλῆος</persName>·</l>
+                        <l n="323">χειρὸς ἑλόντʼ ἀγέμεν Βρισηΐδα καλλιπάρῃον·</l>
+                        <l n="324">εἰ δέ κε μὴ δώῃσιν ἐγὼ δέ κεν αὐτὸς ἕλωμαι</l>
+                        <l n="325">ἐλθὼν σὺν πλεόνεσσι· τό οἱ καὶ ῥίγιον ἔσται.</l>
+                    </q>
+                    <l n="326">
+                        <milestone ed="P" unit="para"/>ὣς εἰπὼν προΐει, κρατερὸν δʼ ἐπὶ μῦθον ἔτελλε·</l>
+                    <l n="327">τὼ δʼ ἀέκοντε βάτην παρὰ θῖνʼ ἁλὸς ἀτρυγέτοιο,</l>
+                    <l n="328"><addName type="group name" key="myrmidon">Μυρμιδόνων</addName> δʼ ἐπί τε κλισίας καὶ νῆας ἱκέσθην,</l>
+                    <l n="329">τὸν δʼ εὗρον παρά τε κλισίῃ καὶ νηῒ μελαίνῃ</l>
+                    <l n="330">ἥμενον· οὐδʼ ἄρα τώ γε ἰδὼν γήθησεν <persName key="achilles">Ἀχιλλεύς</persName>.</l>
+                    <l n="331">τὼ μὲν ταρβήσαντε καὶ αἰδομένω βασιλῆα</l>
+                    <l n="332">στήτην, οὐδέ τί μιν προσεφώνεον οὐδʼ ἐρέοντο·</l>
+                    <l n="333">αὐτὰρ ὃ ἔγνω ᾗσιν ἐνὶ φρεσὶ φώνησέν τε·</l>
+                    <q>
+                        <l n="334">χαίρετε <addName type="descriptor" key="talthybius,eurybates">κήρυκες</addName> <addName type="descriptor" key="talthybius,eurybates"><persName key="zeus">Διὸς</persName> ἄγγελοι ἠδὲ καὶ ἀνδρῶν</addName>,</l>
+                        <l n="335">ἆσσον ἴτʼ· οὔ τί μοι ὔμμες ἐπαίτιοι ἀλλʼ <persName key="agamemnon">Ἀγαμέμνων</persName>,</l>
+                        <l n="336">ὃ σφῶϊ προΐει <persName key="briseis">Βρισηΐδος</persName> εἵνεκα κούρης.</l>
+                        <l n="337">ἀλλʼ ἄγε <addName type="epithet-lineage" key="patroclus">διογενὲς</addName> <persName key="patroclus">Πατρόκλεες</persName> ἔξαγε κούρην</l>
+                        <l n="338">καί σφωϊν δὸς ἄγειν· τὼ δʼ αὐτὼ μάρτυροι ἔστων</l>
+                        <l n="339">πρός τε <addName type="descriptor" key="gods">θεῶν μακάρων</addName> πρός τε θνητῶν ἀνθρώπων</l>
+                        <l n="340">καὶ πρὸς τοῦ <addName type="descriptor" key="agamemnon">βασιλῆος ἀπηνέος</addName> εἴ ποτε δʼ αὖτε</l>
+                        <l n="341">χρειὼ ἐμεῖο γένηται ἀεικέα λοιγὸν ἀμῦναι</l>
+                        <l n="342">τοῖς ἄλλοις· ἦ γὰρ ὅ γʼ ὀλοιῇσι φρεσὶ θύει,</l>
+                        <l n="343">οὐδέ τι οἶδε νοῆσαι ἅμα πρόσσω καὶ ὀπίσσω,</l>
+                        <l n="344">ὅππως οἱ παρὰ νηυσὶ σόοι μαχέοιντο <addName type="group name" key="achaean">Ἀχαιοί</addName>.</l>
+                    </q>
+                    <milestone ed="p" n="345" unit="card"/>
+                    <l n="345">
+                        <milestone ed="P" unit="para"/>ὣς φάτο, <persName key="patroclus">Πάτροκλος</persName> δὲ φίλῳ ἐπεπείθεθʼ ἑταίρῳ,</l>
+                    <l n="346">ἐκ δʼ ἄγαγε κλισίης <persName key="briseis">Βρισηΐδα</persName> <addName type="descriptor" key="briseis">καλλιπάρῃον</addName>,</l>
+                    <l n="347">δῶκε δʼ ἄγειν· τὼ δʼ αὖτις ἴτην παρὰ νῆας <addName type="group name" key="achaean">Ἀχαιῶν</addName>·</l>
+                    <l n="348">ἣ δʼ ἀέκουσʼ ἅμα τοῖσι γυνὴ κίεν· αὐτὰρ <persName key="achilles">Ἀχιλλεὺς</persName></l>
+                    <l n="349">δακρύσας ἑτάρων ἄφαρ ἕζετο νόσφι λιασθείς,</l>
+                    <l n="350">θῖνʼ ἔφʼ ἁλὸς πολιῆς, ὁρόων ἐπʼ ἀπείρονα πόντον·</l>
+                    <l n="351">πολλὰ δὲ μητρὶ φίλῃ ἠρήσατο χεῖρας ὀρεγνύς·</l>
+                    <q>
+                        <l n="352">μῆτερ ἐπεί μʼ ἔτεκές γε μινυνθάδιόν περ ἐόντα,</l>
+                        <l n="353">τιμήν πέρ μοι ὄφελλεν <addName type="epithet" key="zeus">Ὀλύμπιος</addName> ἐγγυαλίξαι</l>
+                        <l n="354"><persName key="zeus">Ζεὺς</persName> <addName type="epithet" key="zeus">ὑψιβρεμέτης</addName>· νῦν δʼ οὐδέ με τυτθὸν ἔτισεν·</l>
+                        <l n="355">ἦ γάρ μʼ <addName type="epithet-lineage" key="agamemnon">Ἀτρεΐδης</addName> <addName type="epithet" key="agamemnon">εὐρὺ κρείων <persName key="agamemnon">Ἀγαμέμνων</persName></addName></l>
+                        <l n="356">ἠτίμησεν· ἑλὼν γὰρ ἔχει γέρας αὐτὸς ἀπούρας.</l>
+                    </q>
+                    <l n="357">
+                        <milestone ed="P" unit="para"/>ὣς φάτο δάκρυ χέων, τοῦ δʼ ἔκλυε <addName type="descriptor" key="thetis">πότνια μήτηρ</addName></l>
+                    <l n="358">ἡμένη ἐν βένθεσσιν ἁλὸς παρὰ πατρὶ <addName type="epithet" key="triton">γέροντι</addName>·</l>
+                    <l n="359">καρπαλίμως δʼ ἀνέδυ πολιῆς ἁλὸς ἠΰτʼ ὀμίχλη,</l>
+                    <l n="360">καί ῥα πάροιθʼ αὐτοῖο καθέζετο δάκρυ χέοντος,</l>
+                    <l n="361">χειρί τέ μιν κατέρεξεν ἔπος τʼ ἔφατʼ ἔκ τʼ ὀνόμαζε·</l>
+                    <q>
+                        <l n="362">τέκνον τί κλαίεις; τί δέ σε φρένας ἵκετο πένθος;</l>
+                        <l n="363">ἐξαύδα, μὴ κεῦθε νόῳ, ἵνα εἴδομεν ἄμφω.</l>
+                    </q>
+                    <l n="364">
+                        <milestone ed="P" unit="para"/>τὴν δὲ βαρὺ στενάχων προσέφη <addName type="epithet" key="achilles">πόδας ὠκὺς</addName> <persName key="achilles">Ἀχιλλεύς</persName>·</l>
+                    <q>
+                        <l n="365">οἶσθα· τί ἤ τοι ταῦτα ἰδυίῃ πάντʼ ἀγορεύω;</l>
+                        <l n="366">ᾠχόμεθʼ ἐς <placeName key="thebes">Θήβην</placeName> <addName type="descriptor" key="thebes">ἱερὴν πόλιν <persName key="eetion">Ἠετίωνος</persName></addName>,</l>
+                        <l n="367">τὴν δὲ διεπράθομέν τε καὶ ἤγομεν ἐνθάδε πάντα·</l>
+                        <l n="368">καὶ τὰ μὲν εὖ δάσσαντο μετὰ σφίσιν <addName type="epithet-lineage" key="achaean">υἷες <addName type="group name" key="achaean">Ἀχαιῶν</addName></addName>,</l>
+                        <l n="369">ἐκ δʼ ἕλον <addName type="epithet-lineage" key="agamemnon">Ἀτρεΐδῃ</addName> <addName type="epithet-lineage" key="chriseis">Χρυσηΐδα</addName> <addName type="epithet" key="chriseis">καλλιπάρῃον</addName>.</l>
+                        <l n="370"><persName key="chryses">Χρύσης</persName> δʼ αὖθʼ <addName type="descriptor" key="chryses">ἱερεὺς <addName type="epithet" key="apollo">ἑκατηβόλου</addName> <persName key="apollo">Ἀπόλλωνος</persName></addName></l>
+                        <l n="371">ἦλθε θοὰς ἐπὶ νῆας <addName type="group name" key="achaean">Ἀχαιῶν</addName> <addName type="epithet" key="achaean">χαλκοχιτώνων</addName></l>
+                        <l n="372">λυσόμενός τε θύγατρα φέρων τʼ ἀπερείσιʼ ἄποινα,</l>
+                        <l n="373">στέμματʼ ἔχων ἐν χερσὶν <addName type="epithet" key="apollo">ἑκηβόλου</addName> <persName key="apollo">Ἀπόλλωνος</persName></l>
+                        <l n="374">χρυσέῳ ἀνὰ σκήπτρῳ, καὶ λίσσετο πάντας <addName type="group name" key="achaean">Ἀχαιούς</addName>,</l>
+                        <l n="375"><addName type="epithet-lineage" key="agamemnon,menelaus">Ἀτρεΐδα</addName> δὲ μάλιστα δύω <addName type="descriptor" key="agamemnon,menelaus">κοσμήτορε λαῶν</addName>.</l>
+                        <l n="376">ἔνθʼ ἄλλοι μὲν πάντες ἐπευφήμησαν <addName type="group name" key="achaean">Ἀχαιοὶ</addName></l>
+                        <l n="377">αἰδεῖσθαί θʼ ἱερῆα καὶ ἀγλαὰ δέχθαι ἄποινα·</l>
+                        <l n="378">ἀλλʼ οὐκ <addName type="epithet-lineage" key="agamemnon">Ἀτρεΐδῃ</addName> <persName key="agamemnon">Ἀγαμέμνονι</persName> ἥνδανε θυμῷ,</l>
+                        <l n="379">ἀλλὰ κακῶς ἀφίει, κρατερὸν δʼ ἐπὶ μῦθον ἔτελλε·</l>
+                        <l n="380">χωόμενος δʼ ὁ <addName type="descriptor" key="chryses">γέρων</addName> πάλιν ᾤχετο· τοῖο δʼ <persName key="apollo">Ἀπόλλων</persName></l>
+                        <l n="381">εὐξαμένου ἤκουσεν, ἐπεὶ μάλα οἱ φίλος ἦεν,</l>
+                        <l n="382">ἧκε δʼ ἐπʼ <addName type="group name" key="argive">Ἀργείοισι</addName> κακὸν βέλος· οἳ δέ νυ λαοὶ</l>
+                        <l n="383">θνῇσκον ἐπασσύτεροι, τὰ δʼ ἐπῴχετο κῆλα <addName type="descriptor" key="apollo">θεοῖο</addName></l>
+                        <l n="384">πάντῃ ἀνὰ στρατὸν εὐρὺν <addName type="group name" key="achaean">Ἀχαιῶν</addName>· ἄμμι δὲ <addName type="descriptor" key="chryses">μάντις</addName></l>
+                        <l n="385">εὖ εἰδὼς ἀγόρευε θεοπροπίας <addName type="epithet" key="apollo">ἑκάτοιο</addName>.</l>
+                        <milestone ed="p" n="386" unit="card"/>
+                        <l n="386">αὐτίκʼ ἐγὼ πρῶτος κελόμην <addName type="descriptor" key="apollo">θεὸν</addName> ἱλάσκεσθαι·</l>
+                        <l n="387"><addName type="epithet-lineage" key="agamemnon">Ἀτρεΐωνα</addName> δʼ ἔπειτα χόλος λάβεν, αἶψα δʼ ἀναστὰς</l>
+                        <l n="388">ἠπείλησεν μῦθον ὃ δὴ τετελεσμένος ἐστί·</l>
+                        <l n="389">τὴν μὲν γὰρ σὺν νηῒ θοῇ <addName type="epithet" key="achaean">ἑλίκωπες</addName> <addName type="group name" key="achaean">Ἀχαιοὶ</addName></l>
+                        <l n="390">ἐς <placeName key="chryses">Χρύσην</placeName><!--island near Lesbos--> πέμπουσιν, ἄγουσι δὲ δῶρα <addName type="nobility" key="apollo">ἄνακτι</addName>·</l>
+                        <l n="391">τὴν δὲ νέον κλισίηθεν ἔβαν κήρυκες ἄγοντες</l>
+                        <l n="392"><addName type="epithet-lineage" key="briseis">κούρην Βρισῆος</addName> τήν μοι δόσαν <addName type="epithet-lineage" key="sons of achaean">υἷες <addName type="group name" key="achaean">Ἀχαιῶν</addName></addName>.</l>
+                        <l n="393">ἀλλὰ σὺ εἰ δύνασαί γε περίσχεο παιδὸς ἑῆος·</l>
+                        <l n="394">ἐλθοῦσʼ <placeName key="olympus">Οὔλυμπον</placeName> δὲ <persName key="zeus">Δία</persName> λίσαι, εἴ ποτε δή τι</l>
+                        <l n="395">ἢ ἔπει ὤνησας κραδίην <persName key="zeus">Διὸς</persName> ἠὲ καὶ ἔργῳ.</l>
+                        <l n="396">πολλάκι γάρ σεο πατρὸς ἐνὶ μεγάροισιν ἄκουσα</l>
+                        <l n="397">εὐχομένης ὅτʼ ἔφησθα <addName type="epithet" key="kronos">κελαινεφέϊ</addName> <addName type="epithet-lineage" key="zeus">Κρονίωνι</addName></l>
+                        <l n="398">οἴη ἐν <addName type="descriptor" key="gods">ἀθανάτοισιν</addName> ἀεικέα λοιγὸν ἀμῦναι,</l>
+                        <l n="399">ὁππότε μιν ξυνδῆσαι <addName type="epithet" key="olympians">Ὀλύμπιοι</addName> ἤθελον ἄλλοι</l>
+                        <l n="400"><persName key="hera">Ἥρη</persName> τʼ ἠδὲ <persName key="poseidon">Ποσειδάων</persName> καὶ <addName type="epithet" key="athena">Παλλὰς</addName> <persName key="athena">Ἀθήνη</persName>·</l>
+                        <l n="401">ἀλλὰ σὺ τόν γʼ ἐλθοῦσα <addName type="descriptor" key="thetis">θεὰ</addName> ὑπελύσαο δεσμῶν,</l>
+                        <l n="402">ὦχʼ <addName type="epithet" key="briareus">ἑκατόγχειρον</addName> καλέσασʼ ἐς <addName type="epithet" key="olympus">μακρὸν <placeName key="olympus">Ὄλυμπον</placeName></addName>,</l>
+                        <l n="403">ὃν <persName key="briareus">Βριάρεων</persName> καλέουσι <addName type="descriptor" key="gods">θεοί</addName>, ἄνδρες δέ τε πάντες</l>
+                        <l n="404"><persName key="aegaeon">Αἰγαίωνʼ</persName>, ὃ γὰρ αὖτε βίην οὗ πατρὸς ἀμείνων·</l>
+                        <l n="405">ὅς ῥα παρὰ <addName type="epithet-lineage" key="zeus">Κρονίωνι</addName> καθέζετο κύδεϊ γαίων·</l>
+                        <l n="406">τὸν καὶ ὑπέδεισαν μάκαρες θεοὶ οὐδʼ ἔτʼ ἔδησαν.</l>
+                        <l n="407">τῶν νῦν μιν μνήσασα παρέζεο καὶ λαβὲ γούνων</l>
+                        <l n="408">αἴ κέν πως ἐθέλῃσιν ἐπὶ <addName type="group name" key="trojan">Τρώεσσιν</addName> ἀρῆξαι,</l>
+                        <l n="409">τοὺς δὲ κατὰ πρύμνας τε καὶ ἀμφʼ ἅλα ἔλσαι <addName type="group name" key="achaean">Ἀχαιοὺς</addName></l>
+                        <l n="410">κτεινομένους, ἵνα πάντες ἐπαύρωνται βασιλῆος,</l>
+                        <l n="411">γνῷ δὲ καὶ <addName type="epithet-lineage" key="agamemnon">Ἀτρεΐδης</addName> <addName type="epithet" key="agamemnon">εὐρὺ κρείων <persName key="agamemnon">Ἀγαμέμνων</persName></addName></l>
+                        <l n="412">ἣν ἄτην ὅ τʼ <addName type="descriptor" key="achilles">ἄριστον <addName type="group name" key="achaean">Ἀχαιῶν</addName></addName> οὐδὲν ἔτισεν.</l>
+                    </q>
+                    <l n="413">
+                        <milestone ed="P" unit="para"/>τὸν δʼ ἠμείβετʼ ἔπειτα <persName key="thetis">Θέτις</persName> κατὰ δάκρυ χέουσα·</l>
+                    <q>
+                        <l n="414">ὤ μοι τέκνον ἐμόν, τί νύ σʼ ἔτρεφον αἰνὰ τεκοῦσα;</l>
+                        <l n="415">αἴθʼ ὄφελες παρὰ νηυσὶν ἀδάκρυτος καὶ ἀπήμων</l>
+                        <l n="416">ἧσθαι, ἐπεί νύ τοι αἶσα μίνυνθά περ οὔ τι μάλα δήν·</l>
+                        <l n="417">νῦν δʼ ἅμα τʼ ὠκύμορος καὶ ὀϊζυρὸς περὶ πάντων</l>
+                        <l n="418">ἔπλεο· τώ σε κακῇ αἴσῃ τέκον ἐν μεγάροισι.</l>
+                        <l n="419">τοῦτο δέ τοι ἐρέουσα ἔπος <persName key="zeus">Διὶ</persname> <addName type="epithet" key="zeus">τερπικεραύνῳ</addName></l>
+                        <l n="420">εἶμʼ αὐτὴ πρὸς <placeName key="olympus">Ὄλυμπον</placeName> <addName type="descriptor" key="olympus">ἀγάννιφον</addName> αἴ κε πίθηται.</l>
+                        <l n="421">ἀλλὰ σὺ μὲν νῦν νηυσὶ παρήμενος ὠκυπόροισι</l>
+                        <l n="422">μήνιʼ <addName type="group name" key="achaean">Ἀχαιοῖσιν</addName>, πολέμου δʼ ἀποπαύεο πάμπαν·</l>
+                        <l n="423"><persName key="zeus">Ζεὺς</persName> γὰρ ἐς <persName key="oceanus">Ὠκεανὸν</persName> μετʼ <addName type="epithet" key="ethiopian">ἀμύμονας</addName> <addName type="group name" key="ethiopian">Αἰθιοπῆας</addName></l>
+                        <l n="424">χθιζὸς ἔβη κατὰ δαῖτα, <addName type="descriptor" key="gods">θεοὶ</addName> δʼ ἅμα πάντες ἕποντο·</l>
+                        <l n="425">δωδεκάτῃ δέ τοι αὖτις ἐλεύσεται <placeName key="olympus">Οὔλυμπον</placeName> δέ,</l>
+                        <l n="426">καὶ τότʼ ἔπειτά τοι εἶμι <persName key="zeus">Διὸς</persName> ποτὶ χαλκοβατὲς δῶ,</l>
+                        <l n="427">καί μιν γουνάσομαι καί μιν πείσεσθαι ὀΐω.</l>
+                    </q>
+                    <milestone ed="p" n="428" unit="card"/>
+                    <l n="428">
+                        <milestone ed="P" unit="para"/>ὣς ἄρα φωνήσασʼ ἀπεβήσετο, τὸν δὲ λίπʼ αὐτοῦ</l>
+                    <l n="429">χωόμενον κατὰ θυμὸν <addName type="epithet" key="chryseis">ἐϋζώνοιο</addName> γυναικὸς</l>
+                    <l n="430">τήν ῥα βίῃ ἀέκοντος ἀπηύρων· αὐτὰρ <persName key="odysseus">Ὀδυσσεὺς</persName></l>
+                    <l n="431">ἐς <placeName key="chryses">Χρύσην</placeName> ἵκανεν ἄγων ἱερὴν ἑκατόμβην.</l>
+                    <l n="432">οἳ δʼ ὅτε δὴ λιμένος πολυβενθέος ἐντὸς ἵκοντο</l>
+                    <l n="433">ἱστία μὲν στείλαντο, θέσαν δʼ ἐν νηῒ μελαίνῃ,</l>
+                    <l n="434">ἱστὸν δʼ ἱστοδόκῃ πέλασαν προτόνοισιν ὑφέντες</l>
+                    <l n="435">καρπαλίμως, τὴν δʼ εἰς ὅρμον προέρεσσαν ἐρετμοῖς.</l>
+                    <l n="436">ἐκ δʼ εὐνὰς ἔβαλον, κατὰ δὲ πρυμνήσιʼ ἔδησαν·</l>
+                    <l n="437">ἐκ δὲ καὶ αὐτοὶ βαῖνον ἐπὶ ῥηγμῖνι θαλάσσης,</l>
+                    <l n="438">ἐκ δʼ ἑκατόμβην βῆσαν <addName type="epithet" key="apollo">ἑκηβόλῳ</addName> <persName key="apollo">Ἀπόλλωνι</persName>·</l>
+                    <l n="439">ἐκ δὲ <addName type="epithet-lineage" key="chryseis">Χρυσηῒς</addName> νηὸς βῆ ποντοπόροιο.</l>
+                    <l n="440">τὴν μὲν ἔπειτʼ ἐπὶ βωμὸν ἄγων <addName type="epithet" key="odysseus">πολύμητις</addName> <persName key="odysseus">Ὀδυσσεὺς</persName></l>
+                    <l n="441">πατρὶ φίλῳ ἐν χερσὶ τίθει καί μιν προσέειπεν·</l>
+                    <q>
+                        <l n="442">ὦ <persName key="Chryses">Χρύση</persName>, πρό μʼ ἔπεμψεν <addName type="epithet" key="agamemnon">ἄναξ ἀνδρῶν</addName> <persName key="agamemnon">Ἀγαμέμνων</persName></l>
+                        <l n="443">παῖδά τε σοὶ ἀγέμεν, <addName type="epithet" key="apollo">Φοίβῳ</addName> θʼ ἱερὴν ἑκατόμβην</l>
+                        <l n="444">ῥέξαι ὑπὲρ <addName type="group name" key="danaan">Δαναῶν</addName> ὄφρʼ ἱλασόμεσθα <addName type="nobility" key="apollo">ἄνακτα</addName>,</l>
+                        <l n="445">ὃς νῦν <addName type="group name" key="argive">Ἀργείοισι</addName> πολύστονα κήδεʼ ἐφῆκεν.</l>
+                    </q>
+                    <l n="446">
+                        <milestone ed="P" unit="para"/>ὣς εἰπὼν ἐν χερσὶ τίθει, ὃ δὲ δέξατο χαίρων</l>
+                    <l n="447">παῖδα φίλην· τοὶ δʼ ὦκα θεῷ ἱερὴν ἑκατόμβην</l>
+                    <l n="448">ἑξείης ἔστησαν ἐΰδμητον περὶ βωμόν,</l>
+                    <l n="449">χερνίψαντο δʼ ἔπειτα καὶ οὐλοχύτας ἀνέλοντο.</l>
+                    <l n="450">τοῖσιν δὲ <persName key="Chryses">Χρύσης</persName> μεγάλʼ εὔχετο χεῖρας ἀνασχών·</l>
+                    <q>
+                        <l n="451">κλῦθί μευ <addName type="epithet" key="apollo">ἀργυρότοξʼ</addName>, ὃς <placeName key="chryses">Χρύσην</placeName> ἀμφιβέβηκας</l>
+                        <l n="452"><placeName key="cilla">Κίλλαν</placeName> τε <addName type="descriptor" key="chryse">ζαθέην</addName> <placeName key="tenedos">Τενέδοιό</placeName> τε ἶφι ἀνάσσεις·</l>
+                        <l n="453">ἦ μὲν δή ποτʼ ἐμεῦ πάρος ἔκλυες εὐξαμένοιο,</l>
+                        <l n="454">τίμησας μὲν ἐμέ, μέγα δʼ ἴψαο λαὸν <addName type="group name" key="achaean">Ἀχαιῶν</addName>·</l>
+                        <l n="455">ἠδʼ ἔτι καὶ νῦν μοι τόδʼ ἐπικρήηνον ἐέλδωρ·</l>
+                        <l n="456">ἤδη νῦν <addName type="group name" key="danaan">Δαναοῖσιν</addName> ἀεικέα λοιγὸν ἄμυνον.</l>
+                    </q>
+                    <l n="457">
+                        <milestone ed="P" unit="para"/>ὣς ἔφατʼ εὐχόμενος, τοῦ δʼ ἔκλυε <addName type="epithet" key="apollo">Φοῖβος</addName> <persName key="apollo">Ἀπόλλων</persName>.</l>
+                    <milestone ed="p" n="458" unit="card"/>
+                    <l n="458">αὐτὰρ ἐπεί ῥʼ εὔξαντο καὶ οὐλοχύτας προβάλοντο,</l>
+                    <l n="459">αὐέρυσαν μὲν πρῶτα καὶ ἔσφαξαν καὶ ἔδειραν,</l>
+                    <l n="460">μηρούς τʼ ἐξέταμον κατά τε κνίσῃ ἐκάλυψαν</l>
+                    <l n="461">δίπτυχα ποιήσαντες, ἐπʼ αὐτῶν δʼ ὠμοθέτησαν·</l>
+                    <l n="462">καῖε δʼ ἐπὶ σχίζῃς ὁ <addName type="descriptor" key="chryses">γέρων</addName>, ἐπὶ δʼ αἴθοπα οἶνον</l>
+                    <l n="463">λεῖβε· νέοι δὲ παρʼ αὐτὸν ἔχον πεμπώβολα χερσίν.</l>
+                    <l n="464">αὐτὰρ ἐπεὶ κατὰ μῆρε κάη καὶ σπλάγχνα πάσαντο,</l>
+                    <l n="465">μίστυλλόν τʼ ἄρα τἆλλα καὶ ἀμφʼ ὀβελοῖσιν ἔπειραν,</l>
+                    <l n="466">ὤπτησάν τε περιφραδέως, ἐρύσαντό τε πάντα.</l>
+                    <l n="467">αὐτὰρ ἐπεὶ παύσαντο πόνου τετύκοντό τε δαῖτα</l>
+                    <l n="468">δαίνυντʼ, οὐδέ τι θυμὸς ἐδεύετο δαιτὸς ἐΐσης.</l>
+                    <l n="469">αὐτὰρ ἐπεὶ πόσιος καὶ ἐδητύος ἐξ ἔρον ἕντο,</l>
+                    <l n="470">κοῦροι μὲν κρητῆρας ἐπεστέψαντο ποτοῖο,</l>
+                    <l n="471">νώμησαν δʼ ἄρα πᾶσιν ἐπαρξάμενοι δεπάεσσιν·</l>
+                    <l n="472">οἳ δὲ πανημέριοι μολπῇ <addName type="descriptor" key="apollo">θεὸν</addName> ἱλάσκοντο</l>
+                    <l n="473">καλὸν ἀείδοντες παιήονα <addName type="epithet-lineage" key="achaean">κοῦροι <addName type="group name" key="achaean">Ἀχαιῶν</addName></addName></l>
+                    <l n="474">μέλποντες <addName type="epithet" key="apollo">ἑκάεργον</addName>· ὃ δὲ φρένα τέρπετʼ ἀκούων.</l>
+                    <l n="475">
+                        <milestone ed="P" unit="para"/>ἦμος δʼ ἠέλιος κατέδυ καὶ ἐπὶ κνέφας ἦλθε,</l>
+                    <l n="476">δὴ τότε κοιμήσαντο παρὰ πρυμνήσια νηός·</l>
+                    <l n="477">ἦμος δʼ <addName type="epithet" key="eos">ἠριγένεια</addName> φάνη <addName type="epithet" key="eos">ῥοδοδάκτυλος</addName> <persName key="eos">Ἠώς</persName>,</l>
+                    <l n="478">καὶ τότʼ ἔπειτʼ ἀνάγοντο μετὰ στρατὸν εὐρὺν <addName type="group name" key="achaean">Ἀχαιῶν</addName>·</l>
+                    <l n="479">τοῖσιν δʼ ἴκμενον οὖρον ἵει <addName type="epithet" key="apollo">ἑκάεργος</addName> <persName key="apollo">Ἀπόλλων</persName>·</l>
+                    <l n="480">οἳ δʼ ἱστὸν στήσαντʼ ἀνά θʼ ἱστία λευκὰ πέτασσαν,</l>
+                    <l n="481">ἐν δʼ ἄνεμος πρῆσεν μέσον ἱστίον, ἀμφὶ δὲ κῦμα<!--Monroe translated kuma with "dark" in the English but I don't see the equivalent in the Greek--></l>
+                    <l n="482">στείρῃ πορφύρεον μεγάλʼ ἴαχε νηὸς ἰούσης·</l>
+                    <l n="483">ἣ δʼ ἔθεεν κατὰ κῦμα διαπρήσσουσα κέλευθον.</l>
+                    <l n="484">αὐτὰρ ἐπεί ῥʼ ἵκοντο κατὰ στρατὸν εὐρὺν <addName type="group name" key="achaean">Ἀχαιῶν</addName>,</l>
+                    <l n="485">νῆα μὲν οἵ γε μέλαιναν ἐπʼ ἠπείροιο ἔρυσσαν</l>
+                    <l n="486">ὑψοῦ ἐπὶ ψαμάθοις, ὑπὸ δʼ ἕρματα μακρὰ τάνυσσαν·</l>
+                    <l n="487">αὐτοὶ δʼ ἐσκίδναντο κατὰ κλισίας τε νέας τε.</l>
+                    <l n="488">
+                        <milestone ed="P" unit="para"/>αὐτὰρ ὃ μήνιε νηυσὶ παρήμενος ὠκυπόροισι</l>
+                    <l n="489"><addName type="epithet-lineage" key="achilles">διογενὴς</addName> <addName type="epithet-lineage" key="achilles">Πηλῆος υἱὸς</addName> <addName type="epithet" key="">πόδας ὠκὺς</addName> <persName key="achilles">Ἀχιλλεύς</persName>·</l>
+                    <l n="490">οὔτέ ποτʼ εἰς ἀγορὴν πωλέσκετο κυδιάνειραν</l>
+                    <l n="491">οὔτέ ποτʼ ἐς πόλεμον, ἀλλὰ φθινύθεσκε φίλον κῆρ</l>
+                    <l n="492">αὖθι μένων, ποθέεσκε δʼ ἀϋτήν τε πτόλεμόν τε.</l>
+                    <milestone ed="p" n="493" unit="card"/>
+                    <l n="493">
+                        <milestone ed="P" unit="para"/>ἀλλʼ ὅτε δή ῥʼ ἐκ τοῖο δυωδεκάτη γένετʼ <persName key="eos">ἠώς</persName>,</l>
+                    <l n="494">καὶ τότε δὴ πρὸς <placeName key="olympus">Ὄλυμπον</placeName> ἴσαν <addName type="descriptor" key="gods">θεοὶ αἰὲν ἐόντες</addName></l>
+                    <l n="495">πάντες ἅμα, <persName key="zeus">Ζεὺς</persName> δʼ ἦρχε· <persName key="thetis">Θέτις</persName> δʼ οὐ λήθετʼ ἐφετμέων</l>
+                    <l n="496">παιδὸς ἑοῦ, ἀλλʼ ἥ γʼ ἀνεδύσετο κῦμα θαλάσσης.</l>
+                    <l n="497">ἠερίη δʼ ἀνέβη μέγαν οὐρανὸν <placeName key="olympus">Οὔλυμπόν</placeName> τε.</l>
+                    <l n="498">εὗρεν δʼ <addName type="epithet" key="zeus">εὐρύοπα</addName> <addName type="epithet-lineage" key="zeus">Κρονίδην</addName> ἄτερ ἥμενον ἄλλων</l>
+                    <l n="499">ἀκροτάτῃ κορυφῇ <addName type="epithet" key="olympus">πολυδειράδος</addName> <placeName key="olympus">Οὐλύμποιο</placeName>·</l>
+                    <l n="500">καί ῥα πάροιθʼ αὐτοῖο καθέζετο, καὶ λάβε γούνων</l>
+                    <l n="501">σκαιῇ, δεξιτερῇ δʼ ἄρʼ ὑπʼ ἀνθερεῶνος ἑλοῦσα</l>
+                    <l n="502">λισσομένη προσέειπε <addName type="epithet" key="zeus">Δία</addName> <addName type="epithet-lineage" key="zeus">Κρονίωνα</addName> <addName type="nobility" key="zeus">ἄνακτα</addName>·</l>
+                    <q>
+                        <l n="503"><persName key="zeus">Ζεῦ</persName> <addName type="descriptor" key="zeus">πάτερ</addName> εἴ ποτε δή σε μετʼ <addName type="descriptor" key="gods">ἀθανάτοισιν</addName> ὄνησα</l>
+                        <l n="504">ἢ ἔπει ἢ ἔργῳ, τόδε μοι κρήηνον ἐέλδωρ·</l>
+                        <l n="505">τίμησόν μοι υἱὸν ὃς ὠκυμορώτατος ἄλλων</l>
+                        <l n="506">ἔπλετʼ· ἀτάρ μιν νῦν γε <addName type="epithet" key="agamemnon">ἄναξ ἀνδρῶν</addName> <persName key="agamemnon">Ἀγαμέμνων</persName></l>
+                        <l n="507">ἠτίμησεν· ἑλὼν γὰρ ἔχει γέρας αὐτὸς ἀπούρας.</l>
+                        <l n="508">ἀλλὰ σύ πέρ μιν τῖσον <addName type="epithet" key="zeus">Ὀλύμπιε</addName> <addName type="epithet" key="zeus">μητίετα</addName> <persName key="zeus">Ζεῦ</persName>·</l>
+                        <l n="509">τόφρα δʼ ἐπὶ <addName type="group name" key="trojan">Τρώεσσι</addName> τίθει κράτος ὄφρʼ ἂν <addName type="group name" key="achaean">Ἀχαιοὶ</addName></l>
+                        <l n="510">υἱὸν ἐμὸν τίσωσιν ὀφέλλωσίν τέ ἑ τιμῇ.</l>
+                    </q>
+                    <l n="511">
+                        <milestone ed="P" unit="para"/>ὣς φάτο· τὴν δʼ οὔ τι προσέφη <addName type="epithet" key="zeus">νεφεληγερέτα</addName> <persName key="zeus">Ζεύς</persName>,</l>
+                    <l n="512">ἀλλʼ ἀκέων δὴν ἧστο· <persName key="thetis">Θέτις</persName> δʼ ὡς ἥψατο γούνων</l>
+                    <l n="513">ὣς ἔχετʼ ἐμπεφυυῖα, καὶ εἴρετο δεύτερον αὖτις·</l>
+                    <q>
+                        <l n="514">νημερτὲς μὲν δή μοι ὑπόσχεο καὶ κατάνευσον</l>
+                        <l n="515">ἢ ἀπόειπʼ, ἐπεὶ οὔ τοι ἔπι δέος, ὄφρʼ ἐῢ εἰδέω</l>
+                        <l n="516">ὅσσον ἐγὼ μετὰ πᾶσιν ἀτιμοτάτη θεός εἰμι.</l>
+                    </q>
+                    <l n="517">
+                        <milestone ed="P" unit="para"/>τὴν δὲ μέγʼ ὀχθήσας προσέφη <addName type="epithet" key="zeus">νεφεληγερέτα</addName> <persName key="zeus">Ζεύς</persName>·</l>
+                    <q>
+                        <l n="518">ἦ δὴ λοίγια ἔργʼ ὅ τέ μʼ ἐχθοδοπῆσαι ἐφήσεις</l>
+                        <l n="519"><persName key="hera">Ἥρῃ</persName> ὅτʼ ἄν μʼ ἐρέθῃσιν ὀνειδείοις ἐπέεσσιν·</l>
+                        <l n="520">ἣ δὲ καὶ αὔτως μʼ αἰεὶ ἐν <addName type="descriptor" key="gods">ἀθανάτοισι θεοῖσι</addName></l>
+                        <l n="521">νεικεῖ, καί τέ μέ φησι μάχῃ <addName type="group name" key="trojan">Τρώεσσιν</addName> ἀρήγειν.</l>
+                        <l n="522">ἀλλὰ σὺ μὲν νῦν αὖτις ἀπόστιχε μή τι νοήσῃ</l>
+                        <l n="523"><persName key="hera">Ἥρη</addName>· ἐμοὶ δέ κε ταῦτα μελήσεται ὄφρα τελέσσω·</l>
+                        <l n="524">εἰ δʼ ἄγε τοι κεφαλῇ κατανεύσομαι ὄφρα πεποίθῃς·</l>
+                        <l n="525">τοῦτο γὰρ ἐξ ἐμέθεν γε μετʼ <addName type="descriptor" key="gods">ἀθανάτοισι</addName> μέγιστον</l>
+                        <l n="526">τέκμωρ· οὐ γὰρ ἐμὸν παλινάγρετον οὐδʼ ἀπατηλὸν</l>
+                        <l n="527">οὐδʼ ἀτελεύτητον ὅ τί κεν κεφαλῇ κατανεύσω.</l>
+                    </q>
+                    <l n="528">
+                        <milestone ed="P" unit="para"/>ἦ καὶ κυανέῃσιν ἐπʼ ὀφρύσι νεῦσε <addName type="epithet-lineage" key="zeus">Κρονίων</addName>·</l>
+                    <l n="529">ἀμβρόσιαι δʼ ἄρα χαῖται ἐπερρώσαντο ἄνακτος</l>
+                    <l n="530">κρατὸς ἀπʼ ἀθανάτοιο· <addName type="descriptor" key="olympus">μέγαν</addName> δʼ ἐλέλιξεν <placeName key="olympus">Ὄλυμπον</placeName>.</l>
+                    <milestone ed="p" n="531" unit="card"/>
+ <l n="531">
+                        <milestone ed="P" unit="para"/>τώ γʼ ὣς βουλεύσαντε διέτμαγεν· ἣ μὲν ἔπειτα</l>
+                    <l n="532">εἰς ἅλα ἆλτο βαθεῖαν ἀπʼ <addName type="descriptor" key="olympus">αἰγλήεντος</addName> <placeName key="olympus">Ὀλύμπου</placeName>,</l>
+                    <l n="533"><persName key="zeus">Ζεὺς</persName> δὲ ἑὸν πρὸς δῶμα· θεοὶ δʼ ἅμα πάντες ἀνέσταν</l>
+                    <l n="534">ἐξ ἑδέων σφοῦ πατρὸς ἐναντίον· οὐδέ τις ἔτλη</l>
+                    <l n="535">μεῖναι ἐπερχόμενον, ἀλλʼ ἀντίοι ἔσταν ἅπαντες.</l>
+                    <l n="536">ὣς ὃ μὲν ἔνθα καθέζετʼ ἐπὶ θρόνου· οὐδέ μιν <persName key="hera">Ἥρη</persName></l>
+                    <l n="537">ἠγνοίησεν ἰδοῦσʼ ὅτι οἱ συμφράσσατο βουλὰς</l>
+                    <l n="538"><addName type="epithet" key="thetis">ἀργυρόπεζα</addName> <persName key="thetis">Θέτις</persName> <addName type="epithet-lineage" key="thetis">θυγάτηρ <addName type="epithet" key="proteus">ἁλίοιο γέροντος</addName></addName>.</l>
+                    <l n="539">αὐτίκα κερτομίοισι <addName type="epithet" key="zeus">Δία</addName> <addName type="epithet-lineage" key="zeus">Κρονίωνα</addName> προσηύδα·</l>
+                    <q>
+                        <l n="540">τίς δʼ αὖ τοι <addName type="epithet" key="zeus">δολομῆτα</addName> <addName type="group name" key="gods">θεῶν</addName> συμφράσσατο βουλάς;</l>
+                        <l n="541">αἰεί τοι φίλον ἐστὶν ἐμεῦ ἀπὸ νόσφιν ἐόντα</l>
+                        <l n="542">κρυπτάδια φρονέοντα δικαζέμεν· οὐδέ τί πώ μοι</l>
+                        <l n="543">πρόφρων τέτληκας εἰπεῖν ἔπος ὅττι νοήσῃς.</l>
+                    </q>
+                    <l n="544">
+                        <milestone ed="P" unit="para"/>τὴν δʼ ἠμείβετʼ ἔπειτα <addName type="epithet" key="zeus">πατὴρ ἀνδρῶν τε <addName type="group name" key="gods">θεῶν</addName> τε</addName>·</l>
+                    <q>
+                        <l n="545"><persName key="hera">Ἥρη</persName> μὴ δὴ πάντας ἐμοὺς ἐπιέλπεο μύθους</l>
+                        <l n="546">εἰδήσειν· χαλεποί τοι ἔσοντʼ ἀλόχῳ περ ἐούσῃ·</l>
+                        <l n="547">ἀλλʼ ὃν μέν κʼ ἐπιεικὲς ἀκουέμεν οὔ τις ἔπειτα</l>
+                        <l n="548">οὔτε <addName type="group name" key="gods">θεῶν</addName> πρότερος τὸν εἴσεται οὔτʼ ἀνθρώπων·</l>
+                        <l n="549">ὃν δέ κʼ ἐγὼν ἀπάνευθε <addName type="group name" key="gods">θεῶν</addName> ἐθέλωμι νοῆσαι</l>
+                        <l n="550">μή τι σὺ ταῦτα ἕκαστα διείρεο μηδὲ μετάλλα.</l>
+                    </q>
+                    <l n="551">
+                        <milestone ed="P" unit="para"/>τὸν δʼ ἠμείβετʼ ἔπειτα <addName type="epithet" key="hera">βοῶπις</addName> <addName type="descriptor" key="hera">πότνια</addName> <persName key="hera">Ἥρη</persName>·</l>
+                    <q>
+                        <l n="552"><addName type="descriptor" key="zeus">αἰνότατε</addName> <addName type="epithet-lineage" key="zeus">Κρονίδη</addName> ποῖον τὸν μῦθον ἔειπες;</l>
+                        <l n="553">καὶ λίην σε πάρος γʼ οὔτʼ εἴρομαι οὔτε μεταλλῶ,</l>
+                        <l n="554">ἀλλὰ μάλʼ εὔκηλος τὰ φράζεαι ἅσσʼ ἐθέλῃσθα.</l>
+                        <l n="555">νῦν δʼ αἰνῶς δείδοικα κατὰ φρένα μή σε παρείπῃ</l>
+                        <l n="556"><addName type="epithet" key="thetis">ἀργυρόπεζα</addName> <persName key="thetis">Θέτις</persName> θυγάτηρ ἁλίοιο γέροντος·</l>
+                        <l n="557">ἠερίη<!--"Dawn" in Monroe's translation is either missing or implied after 'early' here--> γὰρ σοί γε παρέζετο καὶ λάβε γούνων·</l>
+                        <l n="558">τῇ σʼ ὀΐω κατανεῦσαι ἐτήτυμον ὡς <persName key="achilles">Ἀχιλῆα</persName></l>
+                        <l n="559">τιμήσῃς, ὀλέσῃς δὲ πολέας ἐπὶ νηυσὶν <addName type="group name" key="achaean">Ἀχαιῶν</addName>.</l>
+                    </q>
+                    <l n="560">
+                        <milestone ed="P" unit="para"/>τὴν δʼ ἀπαμειβόμενος προσέφη <addName type="epithet" key="zeus">νεφεληγερέτα</addName> <persName key="zeus">Ζεύς</persName>·</l>
+                    <q>
+                        <l n="561"><addName key="descriptor" key="hera">δαιμονίη</addName> αἰεὶ μὲν ὀΐεαι οὐδέ σε λήθω·</l>
+                        <l n="562">πρῆξαι δʼ ἔμπης οὔ τι δυνήσεαι, ἀλλʼ ἀπὸ θυμοῦ</l>
+                        <l n="563">μᾶλλον ἐμοὶ ἔσεαι· τὸ δέ τοι καὶ ῥίγιον ἔσται.</l>
+                        <l n="564">εἰ δʼ οὕτω τοῦτʼ ἐστὶν ἐμοὶ μέλλει φίλον εἶναι·</l>
+                        <l n="565">ἀλλʼ ἀκέουσα κάθησο, ἐμῷ δʼ ἐπιπείθεο μύθῳ,</l>
+                        <l n="566">μή νύ τοι οὐ χραίσμωσιν ὅσοι <addName type="group name" key="gods">θεοί</addName> εἰσʼ ἐν <placeName key="olympus">Ὀλύμπῳ</placeName></l>
+                        <l n="567">ἆσσον ἰόνθʼ, ὅτε κέν τοι ἀάπτους χεῖρας ἐφείω.</l>
+                    </q>
+                    <milestone ed="p" n="568" unit="card"/>
+ <l n="568">
+                        <milestone ed="P" unit="para"/>ὣς ἔφατʼ ἔδεισεν δὲ <addName type="epithet" key="hera">βοῶπις</addName> <addName type="descriptor" key="hera">πότνια</addName> <persName key="hera">Ἥρη</persName>,</l>
+                    <l n="569">καί ῥʼ ἀκέουσα καθῆστο ἐπιγνάμψασα φίλον κῆρ·</l>
+                    <l n="570">ὄχθησαν δʼ ἀνὰ δῶμα <persName key="zeus">Διὸς</persName> <addName type="group name" key="gods">θεοὶ</addName> Οὐρανίωνες·</l>
+                    <l n="571">τοῖσιν δʼ <persName key="hephaestus">Ἥφαιστος</persName> <addName key="hephaestus">κλυτοτέχνης</addName> ἦρχʼ ἀγορεύειν</l>
+                    
+                        <l n="572">μητρὶ φίλῃ ἐπίηρα φέρων <addName type="epithet" key="hera">λευκωλένῳ</addName> <persName key="hera">Ἥρῃ</persName>·</l>
+                  <q><l n="573">ἦ δὴ λοίγια ἔργα τάδʼ ἔσσεται οὐδʼ ἔτʼ ἀνεκτά,</l>
+                        <l n="574">εἰ δὴ σφὼ ἕνεκα θνητῶν ἐριδαίνετον ὧδε,</l>
+                        <l n="575">ἐν δὲ <addName type="group name" key="gods">θεοῖσι</addName> κολῳὸν ἐλαύνετον· οὐδέ τι δαιτὸς</l>
+                        <l n="576">ἐσθλῆς ἔσσεται ἦδος, ἐπεὶ τὰ χερείονα νικᾷ.</l>
+                        <l n="577">μητρὶ δʼ ἐγὼ παράφημι καὶ αὐτῇ περ νοεούσῃ</l>
+                        <l n="578">πατρὶ φίλῳ ἐπίηρα φέρειν <addName type="epithet" key="zeus">Διί</addName>, ὄφρα μὴ αὖτε</l>
+                        <l n="579">νεικείῃσι πατήρ, σὺν δʼ ἡμῖν δαῖτα ταράξῃ.</l>
+                        <l n="580">εἴ περ γάρ κʼ ἐθέλῃσιν <addName type="epithet" key="zeus">Ὀλύμπιος</addName> <addName type="epithet" key="zeus">ἀστεροπητὴς</addName></l>
+                        <l n="581">ἐξ ἑδέων στυφελίξαι· ὃ γὰρ <addName type="descriptor" key="zeus">πολὺ φέρτατός</addName> ἐστιν.</l>
+                        <l n="582">ἀλλὰ σὺ τὸν ἐπέεσσι καθάπτεσθαι μαλακοῖσιν·</l>
+                        <l n="583">αὐτίκʼ ἔπειθʼ ἵλαος <addName type="epithet" key="zeus">Ὀλύμπιος</addName> ἔσσεται ἡμῖν.</l>
+                    </q>
+                    <l n="584">
+                        <milestone ed="P" unit="para"/>ὣς ἄρʼ ἔφη καὶ ἀναΐξας δέπας ἀμφικύπελλον</l>
+                    <l n="585">μητρὶ φίλῃ ἐν χειρὶ τίθει καί μιν προσέειπε·</l>
+                    <q>
+                        <l n="586">τέτλαθι μῆτερ ἐμή, καὶ ἀνάσχεο κηδομένη περ,</l>
+                        <l n="587">μή σε φίλην περ ἐοῦσαν ἐν ὀφθαλμοῖσιν ἴδωμαι</l>
+                        <l n="588">θεινομένην, τότε δʼ οὔ τι δυνήσομαι ἀχνύμενός περ</l>
+                        <l n="589">χραισμεῖν· ἀργαλέος γὰρ <addName type="epithet" key="zeus">Ὀλύμπιος</addName> ἀντιφέρεσθαι·</l>
+                        <l n="590">ἤδη γάρ με καὶ ἄλλοτʼ ἀλεξέμεναι μεμαῶτα</l>
+                        <l n="591">ῥῖψε ποδὸς τεταγὼν ἀπὸ βηλοῦ θεσπεσίοιο,</l>
+                        <l n="592">πᾶν δʼ ἦμαρ φερόμην, ἅμα δʼ ἠελίῳ καταδύντι</l>
+                        <l n="593">κάππεσον ἐν <placeName key="lemnos">Λήμνῳ</placeName>, ὀλίγος δʼ ἔτι θυμὸς ἐνῆεν·</l>
+                        <l n="594">ἔνθά με <addName type="group name" key="sintian">Σίντιες</addName> ἄνδρες ἄφαρ κομίσαντο πεσόντα.</l>
+                    </q>
+                    <l n="595">
+                        <milestone ed="P" unit="para"/>ὣς φάτο, μείδησεν δὲ <addName type="descriptor" key="hera">θεὰ</addName> <addName type="epithet" key="hera">λευκώλενος</addName> <persName key="hera">Ἥρη</persName>,</l>
+                    <l n="596">μειδήσασα δὲ παιδὸς ἐδέξατο χειρὶ κύπελλον·</l>
+                    <l n="597">αὐτὰρ ὃ τοῖς ἄλλοισι <addName type="group name" key="gods">θεοῖς</addName> ἐνδέξια πᾶσιν</l>
+                    <l n="598">οἰνοχόει γλυκὺ νέκταρ ἀπὸ κρητῆρος ἀφύσσων·</l>
+                    <l n="599">ἄσβεστος δʼ ἄρʼ ἐνῶρτο γέλως <addName type="epithet" key="gods">μακάρεσσι</addName> <addName type="group name" key="gods">θεοῖσιν</addName></l>
+                    <l n="600">ὡς ἴδον <persName key="hephaestus">Ἥφαιστον</persName> διὰ δώματα ποιπνύοντα.</l>
+                    <l n="601">
+                        <milestone ed="P" unit="para"/>ὣς τότε μὲν πρόπαν ἦμαρ ἐς ἠέλιον καταδύντα</l>
+                    <l n="602">δαίνυντʼ, οὐδέ τι θυμὸς ἐδεύετο δαιτὸς ἐΐσης,</l>
+                    <l n="603">οὐ μὲν φόρμιγγος περικαλλέος ἣν ἔχʼ <persName key="apollo">Ἀπόλλων</persName>,</l>
+                    <l n="604"><addName type="group name" key="muse">Μουσάων</addName> θʼ αἳ ἄειδον ἀμειβόμεναι ὀπὶ καλῇ.</l>
+                    <l n="605">
+                        <milestone ed="P" unit="para"/>αὐτὰρ ἐπεὶ κατέδυ λαμπρὸν φάος ἠελίοιο,</l>
+                    <l n="606">οἳ μὲν κακκείοντες ἔβαν οἶκον δὲ ἕκαστος,</l>
+                    <l n="607">ἧχι ἑκάστῳ δῶμα <addName type="descriptor" key="hephaestus">περικλυτὸς</addName> <addName type="epithet" key="hephaestus">ἀμφιγυήεις</addName></l>
+                    <l n="608"><persNamekey="hephaestus">Ἥφαιστος</persName> ποίησεν ἰδυίῃσι πραπίδεσσι·</l>
+                    <l n="609"><persName key="zeus">Ζεὺς</persName> δὲ πρὸς ὃν λέχος ἤϊʼ <addName type="epithet" key="zeus">Ὀλύμπιος</addName> <addName type="epithet" key="zeus">ἀστεροπητής</addName>,</l>
+                    <l n="610">ἔνθα πάρος κοιμᾶθʼ ὅτε μιν γλυκὺς ὕπνος ἱκάνοι·</l>
+                    <l n="611">ἔνθα καθεῦδʼ ἀναβάς, παρὰ δὲ <addName type="epithet" key="hera">χρυσόθρονος</addName> <persName key="hera">Ἥρη</persName>.</l>
+                </div>
+             </div>
+         </body>
+    </text>
+</TEI>
